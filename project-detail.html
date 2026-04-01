@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로젝트 상세 | 포트폴리오</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project-detail.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Portfolio</a>
+            <ul class="nav-menu">
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Detail Header -->
+    <section class="project-header">
+        <div class="container">
+            <a href="index.html#projects" class="back-link">← 프로젝트 목록으로</a>
+            <h1 class="project-detail-title" id="project-title">[프로젝트 제목]</h1>
+            <p class="project-subtitle" id="project-subtitle">[프로젝트 한 줄 요약]</p>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <span class="meta-label">기간</span>
+                    <span class="meta-value" id="project-duration">[기간]</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">역할</span>
+                    <span class="meta-value" id="project-role">[역할]</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">팀 구성</span>
+                    <span class="meta-value" id="project-team">[팀 구성]</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Main Image -->
+    <section class="project-main-image">
+        <div class="container">
+            <div class="main-image-wrapper">
+                <div class="image-placeholder" id="main-image">
+                    <span>프로젝트 메인 이미지 / 스크린샷</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="project-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-main">
+                    <h2 class="content-title">프로젝트 개요</h2>
+                    <div class="content-text" id="project-overview">
+                        <p>
+                            프로젝트에 대한 전체적인 설명을 작성합니다.
+                            어떤 문제를 해결하기 위해 시작했는지, 목표는 무엇이었는지 설명합니다.
+                        </p>
+                        <p>
+                            프로젝트의 배경과 필요성, 그리고 기대 효과에 대해 서술합니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="content-sidebar">
+                    <div class="sidebar-box">
+                        <h3>사용 기술</h3>
+                        <div class="tech-stack" id="tech-stack">
+                            <span class="tech-item">HTML</span>
+                            <span class="tech-item">CSS</span>
+                            <span class="tech-item">JavaScript</span>
+                            <span class="tech-item">Python</span>
+                            <span class="tech-item">MySQL</span>
+                        </div>
+                    </div>
+                    <div class="sidebar-box">
+                        <h3>링크</h3>
+                        <div class="project-external-links">
+                            <a href="#" class="external-link" id="github-link">
+                                <span class="link-icon">📁</span>
+                                GitHub Repository
+                            </a>
+                            <a href="#" class="external-link" id="demo-link">
+                                <span class="link-icon">🌐</span>
+                                Live Demo
+                            </a>
+                            <a href="#" class="external-link" id="doc-link">
+                                <span class="link-icon">📄</span>
+                                Documentation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="project-section bg-light">
+        <div class="container">
+            <h2 class="content-title center">주요 기능</h2>
+            <div class="features-grid" id="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>[기능 1]</h3>
+                    <p>기능에 대한 설명을 작성합니다.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>[기능 2]</h3>
+                    <p>기능에 대한 설명을 작성합니다.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>[기능 3]</h3>
+                    <p>기능에 대한 설명을 작성합니다.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>[기능 4]</h3>
+                    <p>기능에 대한 설명을 작성합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Gallery -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="content-title center">스크린샷</h2>
+            <div class="screenshots-grid" id="screenshots-grid">
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">스크린샷 1</div>
+                    <p class="screenshot-caption">[화면 설명]</p>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">스크린샷 2</div>
+                    <p class="screenshot-caption">[화면 설명]</p>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">스크린샷 3</div>
+                    <p class="screenshot-caption">[화면 설명]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Role & Contributions -->
+    <section class="project-section bg-light">
+        <div class="container">
+            <h2 class="content-title center">담당 역할 및 기여</h2>
+            <div class="roles-grid" id="roles-grid">
+                <div class="role-card">
+                    <div class="role-header">
+                        <span class="role-number">01</span>
+                        <h3>[역할/기여 1]</h3>
+                    </div>
+                    <p>담당한 역할에 대한 상세 설명을 작성합니다. 어떤 문제를 해결했고, 어떤 방식으로 접근했는지 설명합니다.</p>
+                    <ul class="role-details">
+                        <li>상세 내용 1</li>
+                        <li>상세 내용 2</li>
+                        <li>상세 내용 3</li>
+                    </ul>
+                </div>
+                <div class="role-card">
+                    <div class="role-header">
+                        <span class="role-number">02</span>
+                        <h3>[역할/기여 2]</h3>
+                    </div>
+                    <p>담당한 역할에 대한 상세 설명을 작성합니다.</p>
+                    <ul class="role-details">
+                        <li>상세 내용 1</li>
+                        <li>상세 내용 2</li>
+                    </ul>
+                </div>
+                <div class="role-card">
+                    <div class="role-header">
+                        <span class="role-number">03</span>
+                        <h3>[역할/기여 3]</h3>
+                    </div>
+                    <p>담당한 역할에 대한 상세 설명을 작성합니다.</p>
+                    <ul class="role-details">
+                        <li>상세 내용 1</li>
+                        <li>상세 내용 2</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges & Solutions -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="content-title center">문제 해결 경험</h2>
+            <div class="challenges-list" id="challenges-list">
+                <div class="challenge-item">
+                    <div class="challenge-problem">
+                        <h3>🚨 문제 상황</h3>
+                        <p>[어떤 문제가 발생했는지 설명]</p>
+                    </div>
+                    <div class="challenge-arrow">→</div>
+                    <div class="challenge-solution">
+                        <h3>💡 해결 방법</h3>
+                        <p>[어떻게 해결했는지 설명]</p>
+                    </div>
+                </div>
+                <div class="challenge-item">
+                    <div class="challenge-problem">
+                        <h3>🚨 문제 상황</h3>
+                        <p>[어떤 문제가 발생했는지 설명]</p>
+                    </div>
+                    <div class="challenge-arrow">→</div>
+                    <div class="challenge-solution">
+                        <h3>💡 해결 방법</h3>
+                        <p>[어떻게 해결했는지 설명]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results & Learnings -->
+    <section class="project-section bg-light">
+        <div class="container">
+            <div class="results-grid">
+                <div class="results-box">
+                    <h2 class="content-title">성과</h2>
+                    <ul class="results-list" id="results-list">
+                        <li>
+                            <span class="result-icon">✅</span>
+                            <span>[성과 1 - 정량적/정성적 결과]</span>
+                        </li>
+                        <li>
+                            <span class="result-icon">✅</span>
+                            <span>[성과 2]</span>
+                        </li>
+                        <li>
+                            <span class="result-icon">✅</span>
+                            <span>[성과 3]</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="learnings-box">
+                    <h2 class="content-title">배운 점</h2>
+                    <ul class="learnings-list" id="learnings-list">
+                        <li>
+                            <span class="learning-icon">📚</span>
+                            <span>[배운 점 1 - 기술적/협업적 측면]</span>
+                        </li>
+                        <li>
+                            <span class="learning-icon">📚</span>
+                            <span>[배운 점 2]</span>
+                        </li>
+                        <li>
+                            <span class="learning-icon">📚</span>
+                            <span>[배운 점 3]</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Navigation -->
+    <section class="project-nav">
+        <div class="container">
+            <div class="nav-buttons">
+                <a href="#" class="nav-btn prev" id="prev-project">
+                    <span class="nav-direction">← 이전 프로젝트</span>
+                    <span class="nav-project-name">[이전 프로젝트명]</span>
+                </a>
+                <a href="index.html#projects" class="nav-btn all">
+                    <span>전체 프로젝트 보기</span>
+                </a>
+                <a href="#" class="nav-btn next" id="next-project">
+                    <span class="nav-direction">다음 프로젝트 →</span>
+                    <span class="nav-project-name">[다음 프로젝트명]</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 [이름]. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

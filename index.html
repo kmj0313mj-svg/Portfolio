@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오 | 신입 개발자</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Portfolio</a>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <p class="hero-greeting">안녕하세요, 저는</p>
+            <h1 class="hero-name">[이름]</h1>
+            <h2 class="hero-title">[직무/전공] 신입 개발자입니다</h2>
+            <p class="hero-description">
+                열정적으로 배우고 성장하는 개발자입니다.<br>
+                새로운 기술에 대한 호기심과 문제 해결에 대한 열정을 가지고 있습니다.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">프로젝트 보기</a>
+                <a href="#contact" class="btn btn-secondary">연락하기</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="profile-placeholder">
+                <span>프로필 사진</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        [여기에 자기소개를 작성하세요]
+                    </p>
+                    <p>
+                        학부 과정에서 다양한 프로젝트를 경험하며 실무 역량을 키워왔습니다.
+                        팀 프로젝트를 통해 협업의 중요성을 배웠고, 
+                        개인 프로젝트를 통해 자기주도적 학습 능력을 길렀습니다.
+                    </p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <span class="info-label">이름</span>
+                            <span class="info-value">[이름]</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">학력</span>
+                            <span class="info-value">[대학교 / 전공]</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">이메일</span>
+                            <span class="info-value">[이메일 주소]</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <!-- 추가 스킬 태그 -->
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <!-- 추가 스킬 태그 -->
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Database</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">MySQL</span>
+                        <!-- 추가 스킬 태그 -->
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <!-- 추가 스킬 태그 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <!-- Project Card 1: DMS -->
+                <a href="project1.html" class="project-card-link">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">DMS 시스템</div>
+                            <div class="project-overlay">
+                                <span>자세히 보기</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">실시간 운전자 졸음방지 모니터링 시스템</h3>
+                            <p class="project-description">
+                                Jetson Nano 기반 실시간 얼굴 인증 및 졸음 감지 통합 시스템
+                            </p>
+                            <div class="project-tech">
+                                <span>Jetson Nano</span>
+                                <span>Python</span>
+                                <span>OpenCV</span>
+                                <span>MediaPipe</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project Card 2 -->
+                <a href="project2.html" class="project-card-link">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">자율주행 제어</div>
+                            <div class="project-overlay">
+                                <span>자세히 보기</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">교통표지판 인식 및 자율주행 제어 알고리즘</h3>
+                            <p class="project-description">
+                                MobileNetV2 기반 경량 AI 모델 설계 및 실시간 하드웨어 제어 알고리즘 개발
+                            </p>
+                            <div class="project-tech">
+                                <span>MobileNetV2</span>
+                                <span>PyTorch</span>
+                                <span>Jetson Nano</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project Card 3 -->
+                <a href="project3.html" class="project-card-link">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">프로젝트 이미지</div>
+                            <div class="project-overlay">
+                                <span>자세히 보기</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">[프로젝트 제목 3]</h3>
+                            <p class="project-description">
+                                프로젝트에 대한 간단한 설명을 작성하세요.
+                            </p>
+                            <div class="project-tech">
+                                <span>기술1</span>
+                                <span>기술2</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <!-- Experience Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">[기간]</span>
+                        <h3 class="timeline-title">[경험 제목]</h3>
+                        <p class="timeline-subtitle">[기관/회사명]</p>
+                        <p class="timeline-description">
+                            경험에 대한 설명을 작성하세요.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">[기간]</span>
+                        <h3 class="timeline-title">[경험 제목]</h3>
+                        <p class="timeline-subtitle">[기관/회사명]</p>
+                        <p class="timeline-description">
+                            경험에 대한 설명을 작성하세요.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Experience Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">[기간]</span>
+                        <h3 class="timeline-title">[경험 제목]</h3>
+                        <p class="timeline-subtitle">[기관/회사명]</p>
+                        <p class="timeline-description">
+                            경험에 대한 설명을 작성하세요.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-content">
+                <p class="contact-intro">
+                    함께 일하고 싶으시다면 언제든 연락해주세요!
+                </p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:your@email.com">[이메일 주소]</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <span>[전화번호]</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🔗</div>
+                        <div class="contact-details">
+                            <h4>GitHub</h4>
+                            <a href="https://github.com/username" target="_blank">[GitHub 주소]</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 [이름]. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

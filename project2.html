@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교통표지판 인식 및 자율주행 제어 알고리즘 | 포트폴리오</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project-detail.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Portfolio</a>
+            <ul class="nav-menu">
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Detail Header -->
+    <section class="project-header">
+        <div class="container">
+            <a href="index.html#projects" class="back-link">← 프로젝트 목록으로</a>
+            <h1 class="project-detail-title">교통표지판 인식 및 자율주행 제어 알고리즘</h1>
+            <p class="project-subtitle">MobileNetV2 기반 경량 AI 모델 설계 및 실시간 하드웨어 제어 알고리즘 개발</p>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <span class="meta-label">기간</span>
+                    <span class="meta-value">2025.03 - 2025.06</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">역할</span>
+                    <span class="meta-value">AI 모델 설계 / 제어 알고리즘 개발</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">팀 구성</span>
+                    <span class="meta-value">엣지컴퓨팅설계 텀프로젝트</span>
+                </div>
+            </div>
+            <div class="project-tags">
+                <span class="tag">#MobileNetV2</span>
+                <span class="tag">#모델_경량화</span>
+                <span class="tag">#임베디드_제어</span>
+                <span class="tag">#PyTorch</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Main Image -->
+    <section class="project-main-image">
+        <div class="container">
+            <div class="main-image-wrapper">
+                <div class="image-placeholder">
+                    <span>MobileNetV2 모델 구조 / 제어 알고리즘 흐름도</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 프로젝트 배경 (S) -->
+    <section class="project-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-main">
+                    <h2 class="content-title">프로젝트 배경</h2>
+                    <div class="content-text">
+                        <p>
+                            자율주행 로봇이 복잡한 도로 환경에서 스스로 주행 방향을 결정하기 위해서는 
+                            <strong>시각 정보를 바탕으로 한 지능형 판단 모델</strong>이 필수적입니다.
+                        </p>
+                        <p>
+                            그러나 일반적인 딥러닝 모델은 <strong>연산량이 많아</strong> Jetson Nano와 같은 
+                            엣지 디바이스에서 실시간 제어에 활용하기에는 <strong>속도 지연의 한계</strong>가 있습니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="content-sidebar">
+                    <div class="sidebar-box">
+                        <h3>사용 기술</h3>
+                        <div class="tech-stack">
+                            <span class="tech-item">PyTorch</span>
+                            <span class="tech-item">MobileNetV2</span>
+                            <span class="tech-item">Transfer Learning</span>
+                            <span class="tech-item">Jetson Nano</span>
+                            <span class="tech-item">Python</span>
+                            <span class="tech-item">OpenCV</span>
+                        </div>
+                    </div>
+                    <div class="sidebar-box">
+                        <h3>링크</h3>
+                        <div class="project-external-links">
+                            <a href="#" class="external-link">
+                                <span class="link-icon">📁</span>
+                                GitHub Repository
+                            </a>
+                            <a href="#" class="external-link">
+                                <span class="link-icon">📄</span>
+                                기술 문서
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 해결 목표 (T) -->
+    <section class="project-section bg-light">
+        <div class="container">
+            <h2 class="content-title center">해결 목표</h2>
+            <div class="goal-description">
+                <p class="goal-main">
+                    5종의 교통 표지판을 높은 정확도로 분류하는 <strong>경량 딥러닝 모델</strong>을 설계하고, 
+                    그 결과를 로봇의 <strong>모터 제어와 직접 연동</strong>하는 알고리즘 구현
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>모델 경량화</h3>
+                    <p>MobileNetV2 기반 저연산 고효율 모델 설계</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>90%+ 정확도</h3>
+                    <p>전이 학습을 통한 높은 분류 정확도 달성</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>실시간 제어 루프</h3>
+                    <p>판단-동작 연계 알고리즘 구현</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MobileNetV2 경량화 원리 -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="content-title center">MobileNetV2 경량화 원리</h2>
+            <div class="architecture-overview">
+                <p class="architecture-intro">
+                    MobileNetV2는 <strong>Depthwise Separable Convolution</strong>과 
+                    <strong>Inverted Residual Block</strong>을 통해 
+                    연산량을 대폭 줄이면서도 높은 정확도를 유지하는 경량 CNN 아키텍처입니다.
+                </p>
+                <div class="architecture-grid">
+                    <div class="arch-feature">
+                        <div class="arch-icon">📉</div>
+                        <h4>적은 파라미터</h4>
+                        <p>약 3.4M 파라미터로 VGG 대비 40배 이상 경량화</p>
+                    </div>
+                    <div class="arch-feature">
+                        <div class="arch-icon">⚙️</div>
+                        <h4>Depthwise Separable Conv</h4>
+                        <p>채널별 분리 연산으로 계산량 8~9배 감소</p>
+                    </div>
+                    <div class="arch-feature">
+                        <div class="arch-icon">🔄</div>
+                        <h4>Inverted Residual</h4>
+                        <p>Expand → Depthwise → Project 구조로 메모리 효율 극대화</p>
+                    </div>
+                    <div class="arch-feature">
+                        <div class="arch-icon">🎛️</div>
+                        <h4>Linear Bottleneck</h4>
+                        <p>저차원에서 비선형 활성화로 인한 정보 손실 방지</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 핵심 구현 (A) -->
+    <section class="project-section bg-light">
+        <div class="container">
+            <h2 class="content-title center">핵심 구현</h2>
+            <div class="roles-grid">
+                <div class="role-card">
+                    <div class="role-header">
+                        <span class="role-number">01</span>
+                        <h3>경량 모델 커스터마이징</h3>
+                    </div>
+                    <p>MobileNetV2 분류층(Classifier) 수정 및 전이 학습</p>
+                    <ul class="role-details">
+                        <li>사전 학습된 ImageNet 가중치를 활용한 <strong>Transfer Learning</strong></li>
+                        <li>마지막 FC Layer를 <strong>5개 클래스</strong>에 맞춰 재설계</li>
+                        <li>특징 추출부(Feature Extractor)는 동결, 분류부만 학습</li>
+                        <li>학습 파라미터 수 최소화로 <strong>빠른 수렴 및 과적합 방지</strong></li>
+                    </ul>
+                </div>
+                <div class="role-card">
+                    <div class="role-header">
+                        <span class="role-number">02</span>
+                        <h3>데이터 파이프라인 구축</h3>
+                    </div>
+                    <p>PyTorch DataLoader 기반 전처리 및 학습 파이프라인</p>
+                    <ul class="role-details">
+                        <li>신호등(적/청), STOP, 좌/우회전 <strong>5개 클래스</strong> 직접 라벨링</li>
+                        <li><strong>ImageFolder</strong>를 활용한 자동 디렉토리 기반 라벨링</li>
+                        <li>Resize, Normalize, RandomFlip 등 <strong>데이터 증강</strong> 적용</li>
+                        <li>Train/Validation Split으로 일반화 성능 검증</li>
+                    </ul>
+                </div>
+                <div class="role-card">
+                    <div class="role-header">
+                        <span class="role-number">03</span>
+                        <h3>인식-제어 연동 로직</h3>
+                    </div>
+                    <p>모델 추론 결과와 모터 제어의 알고리즘 일체화</p>
+                    <ul class="role-details">
+                        <li>추론 결과(class_id)에 따른 <strong>동작 매핑 테이블</strong> 설계</li>
+                        <li><strong>set_motors(left, right)</strong> 함수로 모터 속도 직접 제어</li>
+                        <li>적색/STOP → 정지, 청색 → 전진, 좌/우 → 회전 로직 구현</li>
+                        <li>프레임 단위 <strong>실시간 판단-동작 루프</strong> 완성</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 모델 커스터마이징 코드 -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="content-title center">모델 설계 코드</h2>
+            <div class="code-blocks">
+                <div class="code-block-item">
+                    <h4 class="code-title">MobileNetV2 분류층 커스터마이징</h4>
+                    <pre class="code-snippet"><code>import torch
+import torch.nn as nn
+from torchvision import models
+
+# 사전 학습된 MobileNetV2 로드
+model = models.mobilenet_v2(pretrained=True)
+
+# Feature Extractor 동결 (학습 제외)
+for param in model.features.parameters():
+    param.requires_grad = False
+
+# 마지막 분류층을 5개 클래스로 변경
+num_classes = 5  # 적색, 청색, STOP, 좌회전, 우회전
+model.classifier = nn.Sequential(
+    nn.Dropout(p=0.2),
+    nn.Linear(model.last_channel, num_classes)
+)
+
+# 손실 함수 및 옵티마이저 설정
+criterion = nn.CrossEntropyLoss()
+optimizer = torch.optim.Adam(
+    model.classifier.parameters(), 
+    lr=0.001
+)</code></pre>
+                </div>
+                <div class="code-block-item">
+                    <h4 class="code-title">데이터 파이프라인 구성</h4>
+                    <pre class="code-snippet"><code>from torchvision import datasets, transforms
+from torch.utils.data import DataLoader
+
+# 데이터 전처리 및 증강
+transform = transforms.Compose([
+    transforms.Resize((224, 224)),
+    transforms.RandomHorizontalFlip(),
+    transforms.ToTensor(),
+    transforms.Normalize(
+        mean=[0.485, 0.456, 0.406],
+        std=[0.229, 0.224, 0.225]
+    )
+])
+
+# ImageFolder로 자동 라벨링
+train_dataset = datasets.ImageFolder(
+    root='data/train', 
+    transform=transform
+)
+
+# DataLoader 생성
+train_loader = DataLoader(
+    train_dataset, 
+    batch_size=32, 
+    shuffle=True
+)</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 인식-판단-제어 알고리즘 -->
+    <section class="project-section bg-light">
+        <div class="container">
+            <h2 class="content-title center">인식-판단-제어 알고리즘</h2>
+            <div class="algorithm-flow">
+                <div class="algorithm-step">
+                    <div class="algo-icon">📷</div>
+                    <div class="algo-content">
+                        <h4>1. 영상 입력</h4>
+                        <p>CSI 카메라에서 프레임 캡처</p>
+                        <code>frame = camera.read()</code>
+                    </div>
+                </div>
+                <div class="algorithm-connector">▼</div>
+                <div class="algorithm-step">
+                    <div class="algo-icon">🔄</div>
+                    <div class="algo-content">
+                        <h4>2. 전처리</h4>
+                        <p>Resize + Normalize + Tensor 변환</p>
+                        <code>input = transform(frame)</code>
+                    </div>
+                </div>
+                <div class="algorithm-connector">▼</div>
+                <div class="algorithm-step">
+                    <div class="algo-icon">🧠</div>
+                    <div class="algo-content">
+                        <h4>3. 모델 추론</h4>
+                        <p>MobileNetV2로 클래스 예측</p>
+                        <code>class_id = model(input).argmax()</code>
+                    </div>
+                </div>
+                <div class="algorithm-connector">▼</div>
+                <div class="algorithm-step">
+                    <div class="algo-icon">🎯</div>
+                    <div class="algo-content">
+                        <h4>4. 동작 판단</h4>
+                        <p>클래스별 동작 매핑</p>
+                        <code>action = ACTION_MAP[class_id]</code>
+                    </div>
+                </div>
+                <div class="algorithm-connector">▼</div>
+                <div class="algorithm-step">
+                    <div class="algo-icon">⚙️</div>
+                    <div class="algo-content">
+                        <h4>5. 모터 제어</h4>
+                        <p>좌/우 모터 속도 설정</p>
+                        <code>set_motors(left, right)</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 제어 알고리즘 코드 -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="content-title center">제어 알고리즘 코드</h2>
+            <div class="code-blocks code-blocks--single">
+                <div class="code-block-item code-block-item--wide">
+                    <h4 class="code-title">실시간 인식-제어 연동 함수</h4>
+                    <pre class="code-snippet"><code># 클래스별 동작 매핑 테이블
+ACTION_MAP = {
+    0: ('stop', 0, 0),       # 적색 신호 → 정지
+    1: ('forward', 0.5, 0.5), # 청색 신호 → 전진
+    2: ('stop', 0, 0),       # STOP 표지판 → 정지
+    3: ('left', 0, 0.5),     # 좌회전 → 좌측 회전
+    4: ('right', 0.5, 0)     # 우회전 → 우측 회전
+}
+
+def inference_and_control(frame, model, transform):
+    """프레임 입력 → 추론 → 모터 제어 통합 함수"""
+    
+    # 1. 전처리
+    input_tensor = transform(frame).unsqueeze(0).to('cuda')
+    
+    # 2. 추론 (Gradient 계산 비활성화로 속도 향상)
+    with torch.no_grad():
+        output = model(input_tensor)
+        class_id = output.argmax(dim=1).item()
+    
+    # 3. 동작 매핑 및 제어
+    action_name, left_speed, right_speed = ACTION_MAP[class_id]
+    set_motors(left_speed, right_speed)
+    
+    return action_name, class_id</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 기술적 선택 (R) -->
+    <section class="project-section bg-light">
+        <div class="container">
+            <h2 class="content-title center">기술적 선택</h2>
+            <div class="challenges-list">
+                <div class="challenge-item">
+                    <div class="challenge-problem">
+                        <h3>엣지 디바이스 성능 한계</h3>
+                        <p>Jetson Nano의 제한된 GPU 메모리와 연산 성능에서 실시간 추론 필요</p>
+                    </div>
+                    <div class="challenge-arrow">→</div>
+                    <div class="challenge-solution">
+                        <h3>MobileNetV2 경량화 모델</h3>
+                        <p>파라미터 3.4M, Depthwise Conv로 연산량 최소화하며 높은 정확도 유지</p>
+                    </div>
+                </div>
+                <div class="challenge-item">
+                    <div class="challenge-problem">
+                        <h3>센서 기반 제어의 한계</h3>
+                        <p>전통적인 거리/적외선 센서로는 표지판의 의미 파악 불가</p>
+                    </div>
+                    <div class="challenge-arrow">→</div>
+                    <div class="challenge-solution">
+                        <h3>비전 기반 AI 판단</h3>
+                        <p>시각 정보를 AI가 해석하여 물리적 동작으로 연결하는 프로세스 구현</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 시스템 구성 -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="content-title center">분류 클래스 및 동작 매핑</h2>
+            <div class="screenshots-grid screenshots-grid--stack">
+                <div class="screenshot-item screenshot-item--block">
+                    <div class="screenshot-body">
+                        <h3 class="screenshot-block-heading">5종 교통 표지판 → 로봇 동작 매핑</h3>
+                        <p class="screenshot-block-intro">
+                            모델이 분류한 각 클래스에 대해 미리 정의된 동작이 즉시 실행됩니다.
+                            이 매핑 테이블이 인식-제어 알고리즘의 핵심 로직입니다.
+                        </p>
+                        <div class="sign-classification-grid">
+                            <div class="sign-item">
+                                <div class="sign-icon red">🔴</div>
+                                <span class="sign-label">적색 신호</span>
+                                <span class="sign-action">→ 정지 (0, 0)</span>
+                            </div>
+                            <div class="sign-item">
+                                <div class="sign-icon blue">🔵</div>
+                                <span class="sign-label">청색 신호</span>
+                                <span class="sign-action">→ 전진 (0.5, 0.5)</span>
+                            </div>
+                            <div class="sign-item">
+                                <div class="sign-icon stop">🛑</div>
+                                <span class="sign-label">STOP</span>
+                                <span class="sign-action">→ 정지 (0, 0)</span>
+                            </div>
+                            <div class="sign-item">
+                                <div class="sign-icon turn">⬅️</div>
+                                <span class="sign-label">좌회전</span>
+                                <span class="sign-action">→ 좌회전 (0, 0.5)</span>
+                            </div>
+                            <div class="sign-item">
+                                <div class="sign-icon turn">➡️</div>
+                                <span class="sign-label">우회전</span>
+                                <span class="sign-action">→ 우회전 (0.5, 0)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="screenshot-item screenshot-item--block">
+                    <div class="screenshot-body">
+                        <h3 class="screenshot-block-heading">모델 학습 결과</h3>
+                        <p class="screenshot-block-intro">
+                            전이 학습을 통해 제한된 데이터셋에서도 높은 정확도를 달성했습니다.
+                            Feature Extractor 동결 전략으로 빠른 학습 수렴과 과적합 방지를 실현했습니다.
+                        </p>
+                        <div class="training-metrics">
+                            <div class="metric-card">
+                                <span class="metric-value">93.51%</span>
+                                <span class="metric-label">최종 학습 정확도</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-value">3.4M</span>
+                                <span class="metric-label">모델 파라미터 수</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-value">5</span>
+                                <span class="metric-label">분류 클래스</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 검증 결과 (R) -->
+    <section class="project-section bg-light">
+        <div class="container">
+            <h2 class="content-title center">검증 결과</h2>
+            <p class="results-lead">
+                AI 모델 설계부터 디바이스 포팅, 실시간 제어까지의 
+                <strong>Full-Cycle 개발 과정</strong>을 직접 경험하며 검증을 완료했습니다.
+            </p>
+
+            <div class="results-grid">
+                <div class="results-box">
+                    <h3 class="results-subtitle">학습 성과</h3>
+                    <ul class="results-list">
+                        <li>
+                            <span class="result-icon">•</span>
+                            <span>5종 표지판 분류 실험에서 최대 <strong>93.51%</strong> 학습 정확도 달성</span>
+                        </li>
+                        <li>
+                            <span class="result-icon">•</span>
+                            <span>전이 학습으로 적은 데이터에서도 높은 판별 신뢰도 확보</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="results-box">
+                    <h3 class="results-subtitle">동작 검증</h3>
+                    <ul class="results-list">
+                        <li>
+                            <span class="result-icon">•</span>
+                            <span>실제 환경에서 표지판 인식 후 <strong>지연 없이</strong> 주행 동작 수행</span>
+                        </li>
+                        <li>
+                            <span class="result-icon">•</span>
+                            <span>정지, 출발, 회전 등 모든 동작 안정성 확인</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="results-box">
+                    <h3 class="results-subtitle">경험 확장</h3>
+                    <ul class="results-list">
+                        <li>
+                            <span class="result-icon">•</span>
+                            <span>모델 설계 → 학습 → 포팅 → 제어 연동 <strong>Full-Cycle</strong> 경험</span>
+                        </li>
+                        <li>
+                            <span class="result-icon">•</span>
+                            <span>엣지 AI 최적화 및 실시간 시스템 설계 역량 습득</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="results-box">
+                    <h3 class="results-subtitle">프로젝트 완료</h3>
+                    <ul class="results-list">
+                        <li>
+                            <span class="result-icon">•</span>
+                            <span><strong>엣지컴퓨팅설계 텀프로젝트</strong> 최종 보고 완료</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 배운 점 -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="content-title center">배운 점</h2>
+            <div class="learnings-grid">
+                <div class="learning-card">
+                    <p><strong>MobileNetV2</strong> 아키텍처의 경량화 원리와 전이 학습 기법 이해</p>
+                </div>
+                <div class="learning-card">
+                    <p><strong>PyTorch DataLoader</strong>를 활용한 효율적인 데이터 파이프라인 구축 방법</p>
+                </div>
+                <div class="learning-card">
+                    <p>AI 추론 결과를 <strong>하드웨어 제어</strong>로 연결하는 알고리즘 설계 경험</p>
+                </div>
+                <div class="learning-card">
+                    <p>엣지 디바이스에서의 <strong>실시간 AI 시스템</strong> 최적화 방법론 습득</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Navigation -->
+    <section class="project-nav">
+        <div class="container">
+            <div class="nav-buttons">
+                <a href="project1.html" class="nav-btn prev">
+                    <span class="nav-direction">← 이전 프로젝트</span>
+                    <span class="nav-project-name">실시간 운전자 모니터링 시스템</span>
+                </a>
+                <a href="index.html#projects" class="nav-btn all">
+                    <span>전체 프로젝트 보기</span>
+                </a>
+                <a href="project3.html" class="nav-btn next">
+                    <span class="nav-direction">다음 프로젝트 →</span>
+                    <span class="nav-project-name">[프로젝트 3]</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 [이름]. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
