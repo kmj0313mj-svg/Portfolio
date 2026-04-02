@@ -33,7 +33,7 @@
         <div class="container">
             <a href="index.html#projects" class="back-link">← 프로젝트 목록으로</a>
             <h1 class="project-detail-title">실시간 운전자 졸음방지 모니터링 시스템</h1>
-            <p class="project-subtitle">저비용 임베디드 환경에서 실시간 얼굴 인증과 졸음 감지를 동시에 수행하는 통합 안전 시스템</p>
+            <p class="project-subtitle">Jetson Nano 기반 실시간 얼굴 인증 및 졸음 감지 통합 시스템</p>
             <div class="project-meta">
                 <div class="meta-item">
                     <span class="meta-label">기간</span>
@@ -154,7 +154,7 @@
                 <div class="role-card">
                     <div class="role-header">
                         <span class="role-number">01</span>
-                        <h3>안면 인증 시스템</h3>
+                        <h3>얼굴 인증 시스템</h3>
                     </div>
                     <p>InsightFace 모델을 활용한 얼굴 검출 및 특징 추출</p>
                     <ul class="role-details">
@@ -167,7 +167,7 @@
                 <div class="role-card">
                     <div class="role-header">
                         <span class="role-number">02</span>
-                        <h3>경량 졸음 감지 알고리즘</h3>
+                        <h3>졸음 감지 알고리즘</h3>
                     </div>
                     <p>MediaPipe FaceMesh 기반 실시간 눈 상태 분석</p>
                     <ul class="role-details">
@@ -193,39 +193,8 @@
         </div>
     </section>
 
-    <!-- 기술적 선택 (R) -->
-    <section class="project-section bg-light">
-        <div class="container">
-            <h2 class="content-title center">기술적 선택</h2>
-            <div class="challenges-list">
-                <div class="challenge-item">
-                    <div class="challenge-problem">
-                        <h3>알고리즘 최적화</h3>
-                        <p>저사양 임베디드 보드에서 연산 부하를 줄이면서도 정교한 추적이 필요</p>
-                    </div>
-                    <div class="challenge-arrow">→</div>
-                    <div class="challenge-solution">
-                        <h3>MediaPipe + EAR 채택</h3>
-                        <p>CPU 자원 효율이 뛰어난 MediaPipe와 수식 기반 EAR 분석 방식으로 실시간 처리 가능</p>
-                    </div>
-                </div>
-                <div class="challenge-item">
-                    <div class="challenge-problem">
-                        <h3>보안 레이어 강화</h3>
-                        <p>단순 졸음 감지를 넘어 차량 보안까지 고려 필요</p>
-                    </div>
-                    <div class="challenge-arrow">→</div>
-                    <div class="challenge-solution">
-                        <h3>얼굴 인증 기능 추가</h3>
-                        <p>생체 정보 기반 시동 제어로 차량 도난 방지 및 운전자 보안성 확보</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- 시스템 구성 -->
-    <section class="project-section">
+    <section class="project-section bg-light">
         <div class="container">
             <h2 class="content-title center">시스템 구성</h2>
             <div class="screenshots-grid screenshots-grid--stack">
@@ -240,8 +209,8 @@
                         </p>
                         <div class="verification-comparison verification-comparison--embedded">
                             <div class="comparison-item">
-                                <div class="comparison-image">
-                                    <img src="images/unknown-user.png" alt="미등록 사용자 인식">
+                                <div class="comparison-image comparison-image--fit">
+                                    <img src="images/unknown-user-locked.png" alt="미등록 사용자: User Unknown, LOCKED">
                                 </div>
                                 <div class="comparison-label fail">
                                     <span class="label-icon">✗</span>
@@ -251,8 +220,8 @@
                             </div>
                             <div class="comparison-vs">VS</div>
                             <div class="comparison-item">
-                                <div class="comparison-image crop-top">
-                                    <img src="images/registered-user.png" alt="등록된 사용자 인식">
+                                <div class="comparison-image comparison-image--fit">
+                                    <img src="images/registered-user-ready.png" alt="등록 사용자: User minji, Ready Press BUTTON to Start">
                                 </div>
                                 <div class="comparison-label success">
                                     <span class="label-icon">✓</span>
@@ -275,8 +244,8 @@
                         </p>
                         <div class="state-flow-grid">
                             <div class="state-flow-card">
-                                <div class="state-flow-image crop-top">
-                                    <img src="images/drowsy-flow.png" alt="시동 후 눈 감김 상태">
+                                <div class="state-flow-image state-flow-image--fit">
+                                    <img src="images/engine-on-eyes-closed.png" alt="Driver Monitor: Engine ON, 눈 감김 2.3초 EAR 0.10">
                                 </div>
                                 <div class="state-flow-text">
                                     <h4>시동 걸고 눈 감은 상태</h4>
@@ -288,8 +257,8 @@
                                 </div>
                             </div>
                             <div class="state-flow-card">
-                                <div class="state-flow-image crop-bottom">
-                                    <img src="images/drowsy-flow.png" alt="졸음 감지">
+                                <div class="state-flow-image state-flow-image--fit">
+                                    <img src="images/drowsiness-danger.png" alt="Driver Monitor: 졸음 감지, Closed 9.0s, DANGER 경고">
                                 </div>
                                 <div class="state-flow-text">
                                     <h4>졸음 감지</h4>
@@ -306,16 +275,109 @@
 
                 <div class="screenshot-item screenshot-item--block">
                     <div class="screenshot-body">
-                        <div class="screenshot-placeholder">H/W 구성도</div>
+                        <h3 class="screenshot-block-heading">사용자 인증 보안 레이어와 실시간 졸음 감지 로직 간의 상태 천이도</h3>
+                        <p class="screenshot-block-intro">
+                            카메라 입력·얼굴 인증·시동 버튼·EAR 졸음 감지·LED·부저까지의 전체 동작 흐름을 나타낸 로직도입니다.
+                        </p>
+                        <div class="hw-diagram">
+                            <img src="images/hw-flowchart.png" width="611" height="274" alt="H/W 구성 및 시스템 동작 흐름도: 얼굴 인증, 시동 ON, EAR 기반 졸음 감지 및 경고">
+                        </div>
                     </div>
-                    <p class="screenshot-caption screenshot-caption--title">GPIO 연결 LED, 부저, 시동 버튼</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 기술적 선택 (R) -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="content-title center">기술적 선택</h2>
+            <div class="challenges-list">
+                <div class="challenge-item">
+                    <div class="challenge-problem">
+                        <h3>성능과 정밀도의 균형</h3>
+                        <p>저사양 임베디드 보드에서 실시간성 확보</p>
+                    </div>
+                    <div class="challenge-arrow">→</div>
+                    <div class="challenge-solution" style="flex: 2;">
+                        <h3>MediaPipe FaceMesh 채택</h3>
+                        <ul style="list-style: none; padding: 0; margin-top: 10px;">
+                            <li><strong>• YOLO 대비 저부하 설계:</strong> CPU 기반 경량 연산으로 자원 소모 최소화</li>
+                            <li><strong>• 정밀한 상태 분석:</strong> 468개 랜드마크 추출로 EAR 연산 정확도 확보</li>
+                            <li><strong>• 결과:</strong> 임베디드 환경 내 실시간성(30 FPS) 유지</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="challenge-item">
+                    <div class="challenge-problem">
+                        <h3>보안 레이어 강화</h3>
+                        <p>단순 졸음 감지를 넘어 차량 보안까지 고려 필요</p>
+                    </div>
+                    <div class="challenge-arrow">→</div>
+                    <div class="challenge-solution">
+                        <h3>얼굴 인증 기능 추가</h3>
+                        <p>생체 정보 기반 시동 제어로 차량 도난 방지 및 운전자 보안성 확보</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 핵심 코드 -->
+    <section class="project-section bg-light">
+        <div class="container">
+            <h2 class="content-title center">핵심 코드</h2>
+            <p class="results-lead" style="margin-bottom: 0;">
+                EAR 기반 졸음 감지와 코사인 유사도 기반 사용자 인증의 핵심 로직을 분리해 구현했습니다.
+            </p>
+            <div class="code-blocks">
+                <div class="code-block-item">
+                    <h4 class="code-title">EAR (Eye Aspect Ratio) 계산</h4>
+                    <pre class="code-snippet"><code>import numpy as np
+
+def calculate_ear(eye_landmarks):
+    """
+    눈의 6개 랜드마크 좌표로 EAR(Eye Aspect Ratio)을 계산한다.
+    EAR = (||p2-p6|| + ||p3-p5||) / (2 * ||p1-p4||)
+    """
+    p1, p2, p3, p4, p5, p6 = eye_landmarks
+    
+    vertical_1 = np.linalg.norm(np.array(p2) - np.array(p6))
+    vertical_2 = np.linalg.norm(np.array(p3) - np.array(p5))
+    horizontal = np.linalg.norm(np.array(p1) - np.array(p4))
+    
+    ear = (vertical_1 + vertical_2) / (2.0 * horizontal)
+    return ear
+
+EAR_THRESHOLD = 0.25
+DROWSY_TIME_LIMIT = 5.0  # 초</code></pre>
+                </div>
+                <div class="code-block-item">
+                    <h4 class="code-title">코사인 유사도 기반 얼굴 인증</h4>
+                    <pre class="code-snippet"><code>import numpy as np
+
+def cosine_similarity(vec1, vec2):
+    """두 벡터 간 코사인 유사도를 계산한다."""
+    dot_product = np.dot(vec1, vec2)
+    norm1 = np.linalg.norm(vec1)
+    norm2 = np.linalg.norm(vec2)
+    return dot_product / (norm1 * norm2)
+
+def verify_user(input_embedding, registered_embedding, threshold=0.6):
+    """
+    InsightFace로 추출한 512차원 임베딩으로 사용자를 인증한다.
+    유사도가 threshold 이상이면 인증 성공.
+    """
+    similarity = cosine_similarity(input_embedding, registered_embedding)
+    return similarity >= threshold, similarity</code></pre>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 검증 결과 (R) -->
-    <section class="project-section bg-light">
+    <section class="project-section">
         <div class="container">
             <h2 class="content-title center">검증 결과</h2>
             <p class="results-lead">
@@ -326,10 +388,13 @@
             <div class="results-grid">
                 <div class="results-box">
                     <h3 class="results-subtitle">실시간 성능</h3>
+                    <div class="result-badge-group">
+                        <span class="result-badge primary">25~30 FPS</span>
+                    </div>
                     <ul class="results-list">
                         <li>
                             <span class="result-icon">•</span>
-                            <span>전체 시스템 통합 구동 시 약 <strong>25~30 FPS</strong>의 빠른 처리 속도 기록</span>
+                            <span>전체 시스템 통합 구동 시 빠른 처리 속도 기록</span>
                         </li>
                         <li>
                             <span class="result-icon">•</span>
@@ -339,10 +404,14 @@
                 </div>
                 <div class="results-box">
                     <h3 class="results-subtitle">보안 및 제어</h3>
+                    <div class="result-badge-group">
+                        <span class="result-badge success">LOCKED</span>
+                        <span class="result-badge info">READY</span>
+                    </div>
                     <ul class="results-list">
                         <li>
                             <span class="result-icon">•</span>
-                            <span>미등록자 시동 완벽 차단 (<strong>LOCKED 상태 유지</strong>)</span>
+                            <span>미등록자 시동 완벽 차단</span>
                         </li>
                         <li>
                             <span class="result-icon">•</span>
@@ -352,10 +421,13 @@
                 </div>
                 <div class="results-box">
                     <h3 class="results-subtitle">사고 예방 효과</h3>
+                    <div class="result-badge-group">
+                        <span class="result-badge warning">5초 임계값</span>
+                    </div>
                     <ul class="results-list">
                         <li>
                             <span class="result-icon">•</span>
-                            <span>눈 감김 상태가 <strong>5초(DROWSY_TIME_LIMIT)</strong> 지속 시 즉각적 경고</span>
+                            <span>눈 감김 상태가 DROWSY_TIME_LIMIT 지속 시 즉각적 경고</span>
                         </li>
                         <li>
                             <span class="result-icon">•</span>
@@ -365,10 +437,13 @@
                 </div>
                 <div class="results-box">
                     <h3 class="results-subtitle">대외 성과</h3>
+                    <div class="result-badge-group">
+                        <span class="result-badge accent">Capstone Design</span>
+                    </div>
                     <ul class="results-list">
                         <li>
                             <span class="result-icon">•</span>
-                            <span><strong>2025 전자공학 Capstone Design 경진대회</strong> 참가 및 결과 보고 완료</span>
+                            <span>2025 전자공학 Capstone Design 경진대회 참가 및 논문 작성</span>
                         </li>
                     </ul>
                 </div>
@@ -377,7 +452,7 @@
     </section>
 
     <!-- 배운 점 -->
-    <section class="project-section">
+    <section class="project-section bg-light">
         <div class="container">
             <h2 class="content-title center">배운 점</h2>
             <div class="learnings-grid">
@@ -419,7 +494,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 [이름]. All rights reserved.</p>
+            <p>&copy; 2026 강민지. All rights reserved.</p>
         </div>
     </footer>
 
