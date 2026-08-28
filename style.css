@@ -239,16 +239,12 @@ img {
     justify-content: center;
 }
 
-.profile-placeholder {
+.hero-image .profile-picture {
     width: 350px;
     height: 350px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.2rem;
+    object-fit: cover; /* 이미지가 잘리지 않고 도형 안에 꽉 차도록 */
+    object-position: center; /* 이미지를 중앙에 배치 */
     box-shadow: var(--shadow-lg);
 }
 
@@ -628,7 +624,7 @@ img {
         justify-content: center;
     }
 
-    .profile-placeholder {
+    .hero-image .profile-picture {
         width: 280px;
         height: 280px;
     }
