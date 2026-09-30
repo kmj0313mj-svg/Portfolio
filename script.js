@@ -37,11 +37,11 @@ const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
-        navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+        navbar.style.backgroundColor = 'rgba(8, 11, 18, 0.98)';
+        navbar.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.15)';
     } else {
-        navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.05)';
+        navbar.style.backgroundColor = 'rgba(8, 11, 18, 0.95)';
+        navbar.style.boxShadow = 'none';
     }
 });
 

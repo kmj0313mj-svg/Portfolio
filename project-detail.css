@@ -3327,3 +3327,464 @@
     margin: 0 auto;
 }
 
+/* ========================================
+   Project 1 - System Architecture
+======================================== */
+
+/* 전체 구조 영역 */
+.system-architecture {
+    margin-top: 40px;
+    padding: 36px;
+    background: #f8f9fc;
+    border: 1px solid #e8eaf1;
+    border-radius: 20px;
+}
+
+
+/* ========================================
+   공통 단계
+======================================== */
+
+.architecture-group {
+    padding: 28px 0;
+    border-bottom: 1px solid #e2e5ed;
+}
+
+.architecture-group:first-child {
+    padding-top: 0;
+}
+
+.architecture-group:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.architecture-group-title {
+    margin-bottom: 22px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #22283a;
+}
+
+
+/* ========================================
+   기본 가로 흐름
+   - 얼굴 등록
+   - 졸음 감지
+======================================== */
+
+.architecture-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.architecture-node {
+    min-width: 170px;
+    padding: 18px 20px;
+
+    background: #ffffff;
+    border: 1px solid #dfe3ec;
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 4px 14px rgba(30, 40, 70, 0.06);
+}
+
+.architecture-node strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 0.95rem;
+    font-weight: 700;
+
+    color: #252b3d;
+}
+
+.architecture-node span {
+    display: block;
+
+    font-size: 0.82rem;
+
+    color: #747b8d;
+}
+
+.architecture-arrow {
+    flex-shrink: 0;
+
+    font-size: 1.3rem;
+    font-weight: 700;
+
+    color: #667eea;
+}
+
+
+/* ========================================
+   주행 중 졸음 감지
+======================================== */
+
+.architecture-group:last-child .architecture-node {
+    min-width: 135px;
+    padding: 18px 14px;
+}
+
+.architecture-group:last-child .architecture-flow {
+    gap: 10px;
+}
+
+
+/* ========================================
+   운전자 인증 및 시동 제어
+======================================== */
+
+/* 상단 인증 흐름 */
+.auth-main-flow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 14px;
+}
+
+/* 얼굴 입력 / 특징 추출 / 등록 정보 비교 */
+.auth-main-flow > .architecture-node {
+    width: 190px;
+    min-width: 190px;
+}
+
+/* 상단 화살표 */
+.auth-main-flow > .architecture-arrow {
+    margin-top: 48px;
+}
+
+
+/* ========================================
+   등록 사용자 판단
+======================================== */
+
+.auth-decision-wrap {
+    flex: 0 0 210px;
+
+    width: 210px;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow: visible;
+}
+
+.auth-decision-wrap > .auth-decision-node {
+    width: 210px;
+    min-width: 210px;
+}
+
+
+/* ========================================
+   YES / NO 분기
+======================================== */
+
+.auth-branch {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    width: 600px;
+
+    margin-top: 18px;
+    padding-top: 34px;
+
+    gap: 0;
+}
+
+
+/* 판단 박스 중앙 → 분기선 */
+.auth-branch::before {
+    content: "";
+
+    position: absolute;
+
+    top: -18px;
+    left: 50%;
+
+    width: 2px;
+    height: 36px;
+
+    background: #cfd5e6;
+
+    transform: translateX(-50%);
+}
+
+
+/* NO ↔ YES 가로선 */
+.auth-branch::after {
+    content: "";
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 25%;
+    right: 25%;
+
+    height: 2px;
+
+    background: #cfd5e6;
+}
+
+
+/* NO / YES 각 영역 */
+.auth-result {
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+/* 가로 분기선 → NO / YES */
+.auth-result::before {
+    content: "";
+
+    position: absolute;
+
+    top: -16px;
+    left: 50%;
+
+    width: 2px;
+    height: 16px;
+
+    background: #cfd5e6;
+
+    transform: translateX(-50%);
+}
+
+.auth-result--no {
+    grid-column: 1;
+}
+
+.auth-result--yes {
+    grid-column: 2;
+}
+
+
+/* ========================================
+   NO / YES 표시
+======================================== */
+
+.branch-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 42px;
+    height: 26px;
+
+    padding: 0 10px;
+
+    border-radius: 999px;
+
+    background: #eef1ff;
+    color: #667eea;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+/* NO */
+.auth-result--no .branch-label {
+    background: #fff0f0;
+    color: #d45b5b;
+}
+
+/* NO / YES → 다음 단계 화살표 */
+.branch-down-arrow {
+    display: block;
+
+    margin: 7px 0;
+
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1;
+
+    color: #667eea;
+}
+
+
+/* ========================================
+   YES → 시동
+======================================== */
+
+.auth-start-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.auth-start-flow .architecture-node {
+    width: 135px;
+    min-width: 135px;
+}
+
+.auth-start-flow .architecture-arrow {
+    margin-top: 0;
+}
+
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media (max-width: 900px) {
+
+    .system-architecture {
+        padding: 24px 18px;
+    }
+
+
+    /* 기본 흐름 세로 전환 */
+    .architecture-flow {
+        flex-direction: column;
+    }
+
+    .architecture-flow .architecture-arrow {
+        transform: rotate(90deg);
+    }
+
+    .architecture-node {
+        width: 100%;
+        max-width: 360px;
+        min-width: 0;
+    }
+
+
+    /* 졸음 감지 */
+    .architecture-group:last-child .architecture-node {
+        width: 100%;
+        max-width: 360px;
+        min-width: 0;
+    }
+
+
+    /* 인증 과정 */
+    .auth-main-flow {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .auth-main-flow > .architecture-node {
+        width: 100%;
+        max-width: 360px;
+        min-width: 0;
+    }
+
+    .auth-main-flow > .architecture-arrow {
+        margin-top: 0;
+        transform: rotate(90deg);
+    }
+
+
+    /* 사용자 판단 */
+    .auth-decision-wrap {
+        flex: none;
+
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .auth-decision-wrap > .auth-decision-node {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    /* 모바일에서는 분기선을 단순화 */
+    .auth-branch {
+        display: flex;
+
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+
+        margin-top: 24px;
+        padding-top: 0;
+
+        gap: 28px;
+    }
+
+    .auth-branch::before,
+    .auth-branch::after,
+    .auth-result::before {
+        display: none;
+    }
+
+
+    /* YES 이후 시동 과정 */
+    .auth-start-flow {
+        flex-direction: column;
+    }
+
+    .auth-start-flow .architecture-arrow {
+        transform: rotate(90deg);
+    }
+
+    .auth-start-flow .architecture-node {
+        width: 100%;
+        max-width: 360px;
+        min-width: 0;
+    }
+}
+
+/* 졸음 판단 → 경고 출력 조건 */
+.conditional-arrow {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+.conditional-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #667eea;
+    white-space: nowrap;
+}
+
+.conditional-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #667eea;
+    white-space: nowrap;
+}
+
+/* Face Embedding DB → 인증 비교 관계 표시 */
+.embedding-db-node {
+    position: relative;
+}
+
+.embedding-db-node::after {
+    content: "↓ 운전자 인증에 활용";
+    position: absolute;
+
+    left: 50%;
+    bottom: -30px;
+    transform: translateX(-50%);
+
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #667eea;
+    white-space: nowrap;
+}
