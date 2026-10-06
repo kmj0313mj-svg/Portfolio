@@ -445,8 +445,10 @@
                             시동 후 MediaPipe FaceMesh로 눈 주변 랜드마크를 추출하고,
                             랜드마크 좌표를 이용해 EAR을 계산했습니다.
                             EAR이 기준값 이하로 내려간 시간을 누적해 짧은 눈 깜빡임과
-                            지속적인 눈 감김을 구분하고, 5초 이상 지속되면 졸음 상태로 판단해
-                            GPIO를 통해 LED와 부저가 작동하도록 구현했습니다.
+                            지속적인 눈 감김을 구분하고, 5초 이상 지속되면
+                            졸음 상태로 판단하도록 구현했습니다.
+                            판정 결과는 팀에서 구현한 GPIO 경고 로직과 연동되어
+                            LED와 부저가 작동하도록 구성했습니다.
                         </p>
 
 
@@ -496,8 +498,9 @@
                                     </h4>
 
                                     <p>
-                                        눈 감김이 5초 이상 지속되면 Drowsy 상태로 전환하고,
-                                        GPIO를 통해 LED와 부저 경고를 출력했습니다.
+                                        눈 감김이 5초 이상 지속되면 Drowsy 상태로 판단하며,
+                                        판정 결과가 GPIO 경고 로직으로 전달되어
+                                        LED와 부저가 작동하는 것을 확인했습니다.
                                     </p>
 
                                 </div>
@@ -534,31 +537,7 @@
             <div class="code-blocks">
 
 
-                <!-- EAR -->
-                <div class="code-block-item">
-
-                    <h4 class="code-title">
-                        EAR 계산
-                    </h4>
-
-                    <pre class="code-snippet"><code>import numpy as np
-
-def calculate_ear(eye_landmarks):
-    p1, p2, p3, p4, p5, p6 = eye_landmarks
-
-    vertical_1 = np.linalg.norm(np.array(p2) - np.array(p6))
-    vertical_2 = np.linalg.norm(np.array(p3) - np.array(p5))
-    horizontal = np.linalg.norm(np.array(p1) - np.array(p4))
-
-    ear = (vertical_1 + vertical_2) / (2.0 * horizontal)
-
-    return ear
-
-
-EAR_THRESHOLD = 0.25
-DROWSY_TIME_LIMIT = 5.0</code></pre>
-
-                </div>
+            
 
 
                 <!-- Cosine Similarity -->
@@ -593,6 +572,32 @@ def verify_user(
 
                 </div>
 
+                <!-- EAR -->
+                <div class="code-block-item">
+
+                    <h4 class="code-title">
+                        EAR 계산
+                    </h4>
+
+                    <pre class="code-snippet"><code>import numpy as np
+
+def calculate_ear(eye_landmarks):
+    p1, p2, p3, p4, p5, p6 = eye_landmarks
+
+    vertical_1 = np.linalg.norm(np.array(p2) - np.array(p6))
+    vertical_2 = np.linalg.norm(np.array(p3) - np.array(p5))
+    horizontal = np.linalg.norm(np.array(p1) - np.array(p4))
+
+    ear = (vertical_1 + vertical_2) / (2.0 * horizontal)
+
+    return ear
+
+
+EAR_THRESHOLD = 0.25
+DROWSY_TIME_LIMIT = 5.0</code></pre>
+
+                </div>
+
             </div>
 
         </div>
@@ -624,31 +629,30 @@ def verify_user(
                     <h3 class="results-subtitle">
                         실시간 처리
                     </h3>
-
+                    
                     <div class="result-badge-group">
                         <span class="result-badge primary">
-                            25~30 FPS
+                            약 25~30 FPS
                         </span>
                     </div>
-
+                    
                     <ul class="results-list">
-
+                    
                         <li>
                             <span class="result-icon">•</span>
                             <span>
-                                Jetson Nano 환경에서 통합 시스템 구동
+                                Jetson Nano 환경에서 얼굴 인증과 졸음 감지 기능 통합 구동
                             </span>
                         </li>
-
+                    
                         <li>
                             <span class="result-icon">•</span>
                             <span>
-                                구동 중 약 25~30 FPS의 처리 속도 확인
+                                실제 구동 중 약 25~30 FPS의 처리 속도 확인
                             </span>
                         </li>
-
+                    
                     </ul>
-
                 </div>
 
 
@@ -658,33 +662,33 @@ def verify_user(
                     <h3 class="results-subtitle">
                         사용자 인증 및 시동 제어
                     </h3>
-
+                    
                     <div class="result-badge-group">
-                        <span class="result-badge success">
+                        <span class="result-badge warning">
                             LOCKED
                         </span>
-
-                        <span class="result-badge info">
+                        
+                        <span class="result-badge success">
                             READY
                         </span>
                     </div>
-
+                    
                     <ul class="results-list">
-
+                    
                         <li>
                             <span class="result-icon">•</span>
                             <span>
-                                미등록 사용자 시동 차단 동작 확인
+                                미등록 사용자 인증 실패 시 LOCKED 상태 유지
                             </span>
                         </li>
-
+                    
                         <li>
                             <span class="result-icon">•</span>
                             <span>
-                                등록 사용자 인증 후 시동 버튼 활성화
+                                등록 사용자 인증 성공 시 READY 상태로 전환 후 시동 가능
                             </span>
                         </li>
-
+                    
                     </ul>
 
                 </div>
@@ -696,29 +700,29 @@ def verify_user(
                     <h3 class="results-subtitle">
                         졸음 감지
                     </h3>
-
+                    
                     <div class="result-badge-group">
                         <span class="result-badge warning">
                             5초
                         </span>
                     </div>
-
+                    
                     <ul class="results-list">
-
+                    
                         <li>
                             <span class="result-icon">•</span>
                             <span>
-                                눈 감김 지속시간을 기준으로 졸음 상태 판정
+                                눈 감김이 5초 이상 지속될 경우 Drowsy 상태로 판정
                             </span>
                         </li>
-
+                    
                         <li>
                             <span class="result-icon">•</span>
                             <span>
-                                졸음 감지 시 LED 및 부저 경고 동작 확인
+                                졸음 판정 결과와 GPIO 경고 로직의 연동 동작 확인
                             </span>
                         </li>
-
+                    
                     </ul>
 
                 </div>
@@ -728,31 +732,31 @@ def verify_user(
                 <div class="results-box">
 
                     <h3 class="results-subtitle">
-                        프로젝트 결과
+                        프로젝트 산출물
                     </h3>
-
+                    
                     <div class="result-badge-group">
                         <span class="result-badge accent">
                             Capstone Design
                         </span>
                     </div>
-
+                    
                     <ul class="results-list">
-
+                    
                         <li>
                             <span class="result-icon">•</span>
                             <span>
                                 2025 전자공학 Capstone Design 경진대회 참가
                             </span>
                         </li>
-
+                    
                         <li>
                             <span class="result-icon">•</span>
                             <span>
-                                프로젝트 결과를 바탕으로 논문 작성
+                                프로젝트 구현 결과를 바탕으로 논문 작성
                             </span>
                         </li>
-
+                    
                     </ul>
 
                 </div>
@@ -770,35 +774,19 @@ def verify_user(
         <div class="container">
 
             <h2 class="content-title center">
-                회고
+                배운 점
             </h2>
 
-            <div class="learnings-grid">
-
-                <div class="learning-card">
+           
+            <div class="learnings-grid learnings-grid--single">
+                <div class="learning-card learning-card--single">
                     <p>
-                        InsightFace로 추출한 얼굴 특징값을
-                        코사인 유사도로 비교하며
-                        <strong>얼굴 인증 과정을 직접 구현</strong>해볼 수 있었습니다.
+                        이번 프로젝트를 통해 개별 기능을 구현하는 것뿐 아니라,
+                        <strong>각 기능 사이의 조건과 동작 순서를 함께 설계하는 것이 중요하다는 점</strong>을 배웠습니다.
+                        얼굴 인증 결과가 시동 제어로 이어지고, 시동 이후 졸음 감지가 동작하도록 연결하면서
+                        여러 기능을 하나의 시스템으로 통합하는 과정을 경험했습니다.
                     </p>
                 </div>
-
-                <div class="learning-card">
-                    <p>
-                        MediaPipe FaceMesh의 눈 랜드마크를 이용해
-                        EAR을 계산하고,
-                        <strong>실시간 눈 상태를 판단하는 과정</strong>을 구현했습니다.
-                    </p>
-                </div>
-
-                <div class="learning-card">
-                    <p>
-                        영상 처리 결과를 GPIO와 연결하면서
-                        소프트웨어 판단 결과가
-                        <strong>실제 하드웨어 동작으로 이어지는 과정</strong>을 경험했습니다.
-                    </p>
-                </div>
-
             </div>
 
         </div>
