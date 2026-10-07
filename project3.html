@@ -16,10 +16,8 @@
             <a href="index.html" class="nav-logo">Portfolio</a>
             <ul class="nav-menu">
                 <li><a href="index.html#about" class="nav-link">About</a></li>
-                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+
                 <li><a href="index.html#projects" class="nav-link">Projects</a></li>
-                <li><a href="index.html#experience" class="nav-link">Experience</a></li>
-                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -33,21 +31,24 @@
     <section class="project-header">
         <div class="container">
             <a href="index.html#projects" class="back-link">← 프로젝트 목록으로</a>
-            <h1 class="project-detail-title">반려동물 실시간 추적 및 실종 감지 시스템</h1>
-            <p class="project-subtitle">라즈베리파이 5 기반 TFLite 객체 추적 및 Gimbal 제어, SMTP 자동 알림 시스템</p>
+            <h1 class="project-detail-title">엣지 기반 반려동물 추적 및 실종 감지 시스템</h1>
             <div class="project-meta">
+
                 <div class="meta-item">
                     <span class="meta-label">기간</span>
                     <span class="meta-value">2025.05 - 2025.09</span>
                 </div>
+            
+                <div class="meta-item">
+                    <span class="meta-label">팀</span>
+                    <span class="meta-value">2명</span>
+                </div>
+            
                 <div class="meta-item">
                     <span class="meta-label">역할</span>
-                    <span class="meta-value">엣지 AI / 추적·알림 파이프라인 구현</span>
+                    <span class="meta-value">반려동물 탐지·짐벌 추적 및 실종 알림 구현</span>
                 </div>
-                <div class="meta-item">
-                    <span class="meta-label">성과</span>
-                    <span class="meta-value">대한전자공학회 대구경북지부 AI·반도체·ICT 학술대회 논문·발표</span>
-                </div>
+            
             </div>
             <div class="project-tags">
                 <span class="tag">#RaspberryPi5</span>
@@ -58,327 +59,462 @@
         </div>
     </section>
 
-    <!-- Project Main Image -->
-    <section class="project-main-image">
-        <div class="container">
-            <div class="main-image-wrapper">
-                <div class="image-placeholder">
-                    <span>대표 이미지</span>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- 1. 프로젝트 배경 (S) -->
+
     <section class="project-section">
         <div class="container">
-            <div class="content-grid">
-                <div class="content-main">
-                    <h2 class="content-title">프로젝트 배경</h2>
-                    <div class="content-text">
-                        <p>
-                            반려동물 양육 가구가 늘면서 보호자 <strong>부재 시 실종</strong>에 대한 예방·대응 수요가 커지고 있습니다.
-                        </p>
-                        <p>
-                            <strong>고정형 CCTV</strong>는 시야각이 제한되고, 단순 녹화 위주로는
-                            <strong>실시간 추적</strong>이나 <strong>실종 직후 즉각 알림</strong>에 한계가 있습니다.
-                        </p>
-                    </div>
-                </div>
-                <div class="content-sidebar">
-                    <div class="sidebar-box">
-                        <h3>사용 기술</h3>
-                        <div class="tech-stack">
-                            <span class="tech-item">Raspberry Pi 5</span>
-                            <span class="tech-item">PiCamera2</span>
-                            <span class="tech-item">TensorFlow Lite</span>
-                            <span class="tech-item">OpenCV</span>
-                            <span class="tech-item">Gimbal (Servo)</span>
-                            <span class="tech-item">SMTP</span>
-                            <span class="tech-item">Python</span>
-                        </div>
-                    </div>
-                    <div class="sidebar-box">
-                        <h3>링크</h3>
-                        <div class="project-external-links">
-                            <a href="#" class="external-link">
-                                <span class="link-icon">📁</span>
-                                GitHub Repository
-                            </a>
-                            <a href="#" class="external-link">
-                                <span class="link-icon">📄</span>
-                                논문 / 학술대회 자료
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 2. 해결 목표 (T) -->
-    <section class="project-section bg-light">
-        <div class="container">
-            <h2 class="content-title center">해결 목표</h2>
-
-            <div class="goal-unified-card">
+    
+            <h2 class="content-title center">
+                프로젝트 소개
+            </h2>
+    
+            <div class="goal-description">
                 <p class="goal-main">
-                    <strong>Raspberry Pi 5</strong>와 <strong>TFLite</strong>로 반려동물을 실시간 탐지하고,
-                    <strong>짐벌 모터</strong>로 시야를 넓혀 추적하며, 이탈 시 <strong>자동 이메일 알림</strong>까지 이어지는 통합 솔루션을 구현합니다.
+                    Raspberry Pi 5와 TFLite를 활용해 반려동물을 실시간으로 탐지하고,
+                    바운딩 박스 중심 오차를 기반으로 2축 짐벌을 제어해 추적했습니다.
+                    일정 프레임 이상 감지되지 않으면 실종 상태로 판단해
+                    SMTP를 통해 보호자에게 이메일 알림을 전송하도록 구현했습니다.
                 </p>
-                <div class="block-diagram-container">
-                    <img src="img/figure1.jpg" alt="">
-                </div>
             </div>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>엣지 실시간 추론</h3>
-                    <p>디바이스 내부에서 추론 파이프라인 유지 (서버 비의존)</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>짐벌 회전 정밀도</h3>
-                    <p>중심 오차 기반 제어로 회전 오차 최소화 (±45° 범위)</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📧</div>
-                    <h3>지연 없는 SMTP 경고</h3>
-                    <p>Missing 판정 직후 프로토콜 기반 메일 발송</p>
-                </div>
-            </div>
+    
         </div>
     </section>
 
-    <!-- 3. 핵심 구현 (Action) -->
-    <section class="project-section bg-light">
-        <div class="container">
-            <div class="section-title">
-                <h2 class="content-title center">핵심 구현</h2>
-            </div>
 
-            <div class="action-card-container">
-                <div class="action-card">
-                    <div class="card-num">01</div>
-                    <h3>Edge AI 최적화</h3>
-                    <ul class="card-list">
-                        <li><strong>Raspberry Pi 5</strong> 환경 최적화</li>
-                        <li><strong>TFLite</strong> 기반 경량화 모델 적용</li>
-                        <li>단일 객체(Animal) 실시간 추론 속도 확보</li>
-                        <li>PiCamera2 라이브러리 연동 최적화</li>
-                    </ul>
-                </div>
-                <div class="action-card highlight">
-                    <div class="card-num">02</div>
-                    <h3>짐벌 회전 제어</h3>
-                    <ul class="card-list">
-                        <li>객체 중심 좌표 (<code>center_x</code>) 실시간 추적</li>
-                        <li>화면 중앙값 오차 (<code>error_x</code>) 기반 각도 산출</li>
-                        <li><strong>Pan/Tilt 모터</strong> 정밀 각도 제어 로직</li>
-                        <li>사각지대 없는 능동형 모니터링 구현</li>
-                    </ul>
-                </div>
-                <div class="action-card">
-                    <div class="card-num">03</div>
-                    <h3>상태 기반 알림</h3>
-                    <ul class="card-list">
-                        <li>객체 미감지 프레임 카운팅 로직</li>
-                        <li><strong>150프레임(Threshold)</strong> 초과 시 실종 판단</li>
-                        <li><strong>SMTP 프로토콜</strong> 기반 즉각 알림</li>
-                        <li>사용자 지정 메일로 경고 메시지 발송</li>
-                    </ul>
-                </div>
-            </div>
+     
+    <section class="project-section">
 
-            <div class="control-detail-section">
-                <div class="arrow-indicator">▼ 짐벌 제어 원리 상세</div>
-                <div class="detail-content-grid">
-                    <div class="detail-image">
-                        <img src="images/project3/figure2-gimbal-concept.png" alt="그림 2: 짐벌 제어 시스템 구조">
-                        <p class="img-caption">짐벌 제어 시스템 구조도</p>
+        <h2 class="section-title">시스템 전체 구조</h2>
+    
+        <p class="system-structure-intro">
+            카메라 영상 입력부터 반려동물 탐지, 짐벌 추적,
+            실종 판단과 이메일 알림까지의 시스템 구조입니다.
+        </p>
+    
+        <div class="pet-system-structure">
+    
+            <!-- 1. 상단 메인 흐름 -->
+            <div class="pet-system-main-flow">
+    
+                <div class="pet-system-node">
+                    <span class="pet-system-icon">📷</span>
+                    <strong>PiCamera2</strong>
+                    <p>실시간 영상 입력</p>
+                </div>
+    
+                <div class="pet-system-arrow">→</div>
+    
+                <div class="pet-system-node pet-system-node--primary">
+                    <span class="pet-system-icon">🧠</span>
+                    <strong>TFLite</strong>
+                    <p>반려동물 탐지</p>
+                </div>
+    
+                <div class="pet-system-arrow">→</div>
+    
+                <div class="pet-system-node">
+                    <span class="pet-system-icon">🔎</span>
+                    <strong>감지 여부 판단</strong>
+                    <p>프레임별 검출 확인</p>
+                </div>
+    
+            </div>
+    
+    
+            <!-- 2. 감지 여부 판단에서 분기 -->
+            <div class="branch-connector">
+                <div class="branch-connector-stem"></div>
+                <div class="branch-connector-line"></div>
+            </div>
+    
+    
+            <!-- 3. 감지 / 미감지 분기 -->
+            <div class="pet-system-branches">
+    
+                <!-- 감지됨 -->
+                <div class="pet-system-branch">
+    
+                    <div class="pet-branch-label pet-branch-label--detect">
+                        감지됨
                     </div>
-                    <div class="detail-formula">
-                        <h4>회전각(θ<sub>x</sub>) 산출 알고리즘</h4>
-                        <div class="formula-box">
-                            <div class="formula-eq action-katex" id="katex-action-1"></div>
-                            <div class="formula-eq action-katex" id="katex-action-2"></div>
+    
+                    <div class="pet-system-node">
+                        <span class="pet-system-icon">📐</span>
+                        <strong>중심 오차 계산</strong>
+                        <p>center_x · error_x</p>
+                    </div>
+    
+                    <div class="pet-system-arrow pet-system-arrow--down">
+                        ↓
+                    </div>
+    
+                    <div class="pet-system-node">
+                        <span class="pet-system-icon">🎯</span>
+                        <strong>짐벌 추적</strong>
+                        <p>중심 오차 기반 · ±45°</p>
+                    </div>
+    
+                </div>
+    
+    
+                <!-- 미감지 -->
+                <div class="pet-system-branch">
+    
+                    <div class="pet-branch-label pet-branch-label--missing">
+                        미감지
+                    </div>
+    
+                    <div class="pet-system-node">
+                        <span class="pet-system-icon">⏱️</span>
+                        <strong>미감지 누적</strong>
+                        <p>150프레임</p>
+                    </div>
+    
+                    <div class="pet-system-arrow pet-system-arrow--down">
+                        ↓
+                    </div>
+    
+                    <div class="pet-system-node pet-system-node--alert">
+                        <span class="pet-system-icon">✉️</span>
+                        <strong>실종 판단 · 알림</strong>
+                        <p>SMTP 이메일 전송</p>
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    </section>
+
+<!-- =========================
+     핵심 구현
+========================== -->
+<section class="project-section bg-light">
+    <div class="container">
+
+        <div class="section-title">
+            <h2 class="content-title center">핵심 구현</h2>
+        </div>
+
+
+        <div class="action-card-container action-card-container--vertical">
+
+            <!-- 01. 반려동물 실시간 탐지 -->
+            <div class="action-card">
+                <div class="card-num">01</div>
+
+                <h3>반려동물 실시간 탐지</h3>
+
+                <ul class="card-list">
+                    <li>
+                        <strong>PiCamera2</strong>로 실시간 영상 입력
+                    </li>
+                    <li>
+                        <strong>TFLite</strong> 경량 객체 감지 모델을 Raspberry Pi 5에서 실행
+                    </li>
+                    <li>
+                        강아지·고양이 등 반려동물 객체 실시간 탐지
+                    </li>
+                    <li>
+                        탐지된 객체의 바운딩 박스 좌표를 추적 제어에 활용
+                    </li>
+                </ul>
+
+                <div class="implementation-tags">
+                    <span>PiCamera2</span>
+                    <span>TFLite</span>
+                    <span>Real-time</span>
+                </div>
+            </div>
+
+
+            <!-- 흐름 표시 -->
+            <div class="implementation-down-arrow">↓</div>
+
+
+            <!-- 02. 중심 오차 기반 짐벌 추적 -->
+            <div class="action-card highlight action-card--gimbal">
+
+                <div class="card-num">02</div>
+
+                <h3>중심 오차 기반 짐벌 추적</h3>
+
+                <ul class="card-list">
+                    <li>
+                        바운딩 박스 중심 좌표 <code>center_x</code> 계산
+                    </li>
+                    <li>
+                        화면 중앙과의 오차 <code>error_x</code> 산출
+                    </li>
+                    <li>
+                        중심 오차를 회전각으로 변환해 짐벌 제어
+                    </li>
+                    <li>
+                        X축 기준 <strong>±45°</strong> 범위에서 반려동물을 추적
+                    </li>
+                </ul>
+
+
+                <!-- 02 카드 내부 상세 -->
+                <div class="gimbal-detail-inside">
+
+                    <div class="gimbal-detail-label">
+                        ▼ 짐벌 제어 원리 상세
+                    </div>
+
+                    <div class="detail-content-grid">
+
+                        <!-- 구조도 -->
+                        <div class="detail-image">
+                            <img
+                                src="images/project3/figure2-gimbal-concept.png"
+                                alt="짐벌 제어 시스템 구조"
+                            >
+
+                            <p class="img-caption">
+                                짐벌 제어 시스템 구조도
+                            </p>
                         </div>
-                        <p class="formula-desc">
-                            객체가 중앙에서 벗어난 정도를 수치화하여,<br>
-                            모터가 회전해야 할 물리적 각도를 실시간으로 계산합니다.
-                        </p>
+
+
+                        <!-- 수식 -->
+                        <div class="detail-formula">
+
+                            <h4>
+                                회전각(θ<sub>x</sub>) 산출 알고리즘
+                            </h4>
+
+                            <div class="formula-box">
+
+                                <div
+                                    class="formula-eq action-katex"
+                                    id="katex-action-1">
+                                </div>
+
+                                <div
+                                    class="formula-eq action-katex"
+                                    id="katex-action-2">
+                                </div>
+
+                            </div>
+
+                            <p class="formula-desc">
+                                객체가 화면 중심에서 벗어난 정도를 계산하고,
+                                이를 짐벌이 회전해야 할 각도로 변환해
+                                실시간 추적에 활용했습니다.
+                            </p>
+
+                        </div>
+
                     </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 흐름 표시 -->
+            <div class="implementation-down-arrow">↓</div>
+
+
+            <!-- 03. 실종 판단 및 이메일 알림 -->
+            <div class="action-card">
+                <div class="card-num">03</div>
+
+                <h3>실종 판단 및 이메일 알림</h3>
+
+                <ul class="card-list">
+                    <li>
+                        프레임 단위로 반려동물 미감지 상태 누적
+                    </li>
+                    <li>
+                        <strong>150프레임</strong> 연속 미감지 시 이탈 가능성 판단
+                    </li>
+                    <li>
+                        화면에 <strong>Animal missing</strong> 경고 출력
+                    </li>
+                    <li>
+                        <strong>SMTP</strong>를 통해 보호자 이메일로 자동 알림 전송
+                    </li>
+                </ul>
+                <div class="implementation-tags">
+                    <span>150 Frames</span>
+                    <span>Missing</span>
+                    <span>SMTP</span>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- 4. 시스템 구성 -->
+        </div>
+
+    </div>
+</section>
     <section class="project-section">
         <div class="container">
-            <h2 class="content-title center">시스템 구성</h2>
-            <p class="section-lead">
-                <strong>카메라 입력</strong>부터 <strong>짐벌 제어</strong>·<strong>실종 판정</strong>·<strong>메일 발송</strong>까지,
-                엣지 단일 보드에서 동작하는 구성과 데이터 흐름을 정리했습니다.
+    
+            <h2 class="content-title center">실제 동작 및 검증</h2>
+    
+            <p class="results-lead">
+                반려동물 탐지부터 실종 판정, 이메일 알림까지
+                실제 동작 결과를 확인했습니다.
             </p>
-            <div class="screenshots-grid screenshots-grid--stack">
-                    
-                <div class="screenshot-item screenshot-item--block">
-                    <div class="screenshot-body">
-                        <h3 class="screenshot-block-heading">런타임 데이터·제어 흐름</h3>
-                        <p class="screenshot-block-intro">
-                            프레임 단위로 <strong>검출 → 중심 좌표 산출 → 짐벌 각도 갱신</strong>이 이어지고,
-                            객체 미감지가 임계 프레임을 넘으면 <strong>실종으로 판정</strong>하여 SMTP 경로로 전달됩니다.
-                        </p>
-                        <div class="system-architecture">
-                            <div class="architecture-flow">
-                                <div class="arch-node">
-                                    <span class="arch-icon">📷</span>
-                                    <span class="arch-label">PiCamera2<br>프레임 입력</span>
-                                </div>
-                                <span class="arch-arrow">→</span>
-                                <div class="arch-node highlight">
-                                    <span class="arch-badge">Edge</span>
-                                    <span class="arch-icon">🧠</span>
-                                    <span class="arch-label">TFLite<br>Animal 검출</span>
-                                </div>
-                                <span class="arch-arrow">→</span>
-                                <div class="arch-node">
-                                    <span class="arch-icon">📐</span>
-                                    <span class="arch-label">center_x<br>오차 계산</span>
-                                </div>
-                                <span class="arch-arrow">→</span>
-                                <div class="arch-node">
-                                    <span class="arch-icon">🎯</span>
-                                    <span class="arch-label">짐벌<br>Pan / Tilt</span>
-                                </div>
-                            </div>
-                            <div class="architecture-branch">
-                                <div class="branch-line"></div>
-                                <div class="branch-node">
-                                    <span class="arch-icon">⏱️</span>
-                                    <span class="arch-label">미감지<br>프레임 누적</span>
-                                </div>
-                                <span class="arch-arrow">→</span>
-                                <div class="branch-node alert">
-                                    <span class="arch-icon">📧</span>
-                                    <span class="arch-label">SMTP<br>실종 알림</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    
+            <!-- 4가지 검증 결과 그림 -->
+<div class="verification-grid">
+
+    <!-- 강아지 검출 -->
+    <div class="verification-item">
+        <div class="verification-img-wrap">
+            <img src="images/project3/figure3.png" alt="강아지 검출 화면"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="screenshot-placeholder"
+                style="display:none; min-height: 180px; margin: 0; border-radius: 10px;">
+                <span>figure3.png</span>
             </div>
+        </div>
+        <!-- 강아지 검출 -->
+<h4 class="verification-title">강아지 검출</h4>
+<p class="verification-desc">
+    TFLite 모델로 강아지를 실시간 탐지하고 바운딩 박스를 출력했습니다.
+</p>
+    </div>
+
+    <!-- 고양이 검출 -->
+    <div class="verification-item">
+        <div class="verification-img-wrap">
+            <img src="images/project3/cat-detection.png" alt="고양이 검출 화면"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="screenshot-placeholder"
+                style="display:none; min-height: 180px; margin: 0; border-radius: 10px;">
+                <span>cat-detection.png</span>
+            </div>
+        </div>
+        <!-- 고양이 검출 -->
+<h4 class="verification-title">고양이 검출</h4>
+<p class="verification-desc">
+    고양이도 동일한 탐지 파이프라인으로 검출해 추적 대상으로 처리했습니다.
+</p>
+    </div>
+
+    <!-- Missing Animal 출력 -->
+    <div class="verification-item">
+        <div class="verification-img-wrap">
+            <img src="images/project3/missing-animal.png" alt="Missing Animal 출력 화면"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="screenshot-placeholder"
+                style="display:none; min-height: 180px; margin: 0; border-radius: 10px;">
+                <span>missing-animal.png</span>
+            </div>
+        </div>
+        <!-- Missing Animal 출력 -->
+<h4 class="verification-title">Missing Animal 출력</h4>
+<p class="verification-desc">
+    150프레임 연속 미감지 시 "Animal missing" 경고를 화면에 출력했습니다.
+</p>
+    </div>
+
+    <!-- 이메일 실시간 알림 -->
+    <div class="verification-item">
+        <div class="verification-img-wrap">
+            <img src="images/project3/email-alert.png" alt="이메일 실시간 알림 화면"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="screenshot-placeholder"
+                style="display:none; min-height: 180px; margin: 0; border-radius: 10px;">
+                <span>email-alert.png</span>
+            </div>
+        </div>
+        <!-- 이메일 실시간 알림 -->
+<h4 class="verification-title">이메일 실시간 알림</h4>
+<p class="verification-desc">
+    실종 판단과 동시에 SMTP를 통해 보호자 이메일로 경고 메시지를 자동 전송했습니다.
+</p>
+    </div>
+
+</div>
+    
         </div>
     </section>
 
-    <!-- 5. 기술적 선택 -->
-    <section class="project-section">
-        <div class="container">
-            <h2 class="content-title center">기술적 선택</h2>
-            <div class="challenges-list">
-                <div class="challenge-item">
-                    <div class="challenge-problem">
-                        <h3>엣지 연산·실시간성</h3>
-                        <p>라즈베리파이에서 무거운 모델로는 프레임 처리가 버거움</p>
-                    </div>
-                    <div class="challenge-arrow">→</div>
-                    <div class="challenge-solution" style="flex: 2;">
-                        <h3>TFLite + 단일 클래스(Animal) 추론</h3>
-                        <ul style="list-style: none; padding: 0; margin-top: 10px;">
-                            <li><strong>• 경량 런타임:</strong> TensorFlow Lite로 변환·최적화된 모델로 지연 최소화</li>
-                            <li><strong>• 태스크 정렬:</strong> 반려동물 탐지에 필요한 단일 객체 파이프라인으로 연산 집중</li>
-                            <li><strong>• 결과:</strong> PiCamera2 스트림 위에서 추적 루프 유지</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="challenge-item">
-                    <div class="challenge-problem">
-                        <h3>고정 카메라의 시야 한계</h3>
-                        <p>한 지점만 보면 사각지대·이탈 구간에서 추적이 끊김</p>
-                    </div>
-                    <div class="challenge-arrow">→</div>
-                    <div class="challenge-solution">
-                        <h3>짐벌(Pan/Tilt) 능동 추적</h3>
-                        <p>바운딩 박스 중심과 화면 중앙의 오차로 회전각을 산출해, <strong>±45°</strong> 범위에서 시야를 따라가도록 설계했습니다.</p>
-                    </div>
-                </div>
-                <div class="challenge-item">
-                    <div class="challenge-problem">
-                        <h3>실종 직후 즉시 통지</h3>
-                        <p>별도 앱·푸시 없이도 보호자에게 도달해야 함</p>
-                    </div>
-                    <div class="challenge-arrow">→</div>
-                    <div class="challenge-solution">
-                        <h3>SMTP 기반 이메일 알림</h3>
-                        <p>연속 미감지 프레임 임계(<strong>150프레임</strong>) 초과 시 표준 메일 프로토콜로 경고를 발송해, 환경에 덜 의존하는 경로를 택했습니다.</p>
-                    </div>
-                </div>
+    
+    <!-- =========================
+     핵심 코드
+========================== -->
+<section class="project-section bg-light">
+    <div class="container">
+
+        <h2 class="content-title center">핵심 코드</h2>
+
+        <p class="results-lead" style="margin-bottom: 0;">
+            객체 중심 오차를 짐벌 회전각으로 변환하는 추적 로직과,
+            미감지 상태를 누적해 이메일을 전송하는 실종 알림 로직입니다.
+        </p>
+
+
+        <div class="code-blocks">
+
+            <!-- 짐벌 제어 -->
+            <div class="code-block-item">
+
+                <h4 class="code-title">
+                    중심 오차 기반 짐벌 회전각 계산
+                </h4>
+
+                <pre class="code-snippet project3-code-snippet"><code># 바운딩 박스 중심 좌표 정규화
+center_x = center_x_pixel / frame_width
+
+# 화면 중앙(0.5)과의 오차 계산
+error_x = center_x - 0.5
+
+# 오차를 ±45° 회전각으로 변환
+theta_max = 45.0
+angle = error_x * 2 * theta_max
+
+# 짐벌 회전 범위 제한
+angle = max(-theta_max, min(theta_max, angle))
+
+set_servo_angle(angle)</code></pre>
+
             </div>
-        </div>
-    </section>
 
-    <!-- 6. 핵심 코드 -->
-    <section class="project-section bg-light">
-        <div class="container">
-            <h2 class="content-title center">핵심 코드</h2>
-            <p class="results-lead" style="margin-bottom: 0;">
-                짐벌 각도 산출과 SMTP 알림을 분리해, <strong>추적 제어</strong>와 <strong>실종 경고</strong>의 책임을 명확히 했습니다.
-            </p>
-            <div class="code-blocks">
-                <div class="code-block-item">
-                    <h4 class="code-title">짐벌 회전각 θ_x 계산 (error_x → 각도)</h4>
-                    <pre class="code-snippet"><code># 프레임 가로폭 width, 바운딩 박스 중심 픽셀 center_x_pixel
-THETA_MAX_DEG = 45.0   # 짐벌 허용 각도 (논문·판넬: ±45°)
 
-def compute_gimbal_angle_deg(center_x_pixel: float, width: float) -&gt; float:
-    """정규화 center_x와 error_x로 짐벌 회전각(도)을 계산한다."""
-    if width &lt;= 0:
-        return 0.0
-    center_x = center_x_pixel / width          # [0.0, 1.0]
-    error_x = center_x - 0.5                   # 화면 중앙(0.5) 대비 오차
-    theta_max = THETA_MAX_DEG
-    theta_x = error_x * 2 * theta_max          # θ_x = error_x × 2 × θ_max
-    return max(-theta_max, min(theta_max, theta_x))
+            <!-- 실종 판단 및 알림 -->
+            <div class="code-block-item">
 
-# 예: 서보 PWM/각도 매핑은 하드웨어에 맞게 변환
-# angle_deg = compute_gimbal_angle_deg(cx_px, frame_w)
-# set_servo_angle(angle_deg)</code></pre>
-                </div>
-                <div class="code-block-item">
-                    <h4 class="code-title">SMTP 실종 알림 (Missing 시 발송)</h4>
-                    <pre class="code-snippet"><code>import smtplib
-from email.mime.text import MIMEText
+                <h4 class="code-title">
+                    미감지 누적 및 SMTP 알림
+                </h4>
 
-SMTP_SERVER = "smtp.gmail.com"
-SMTP_PORT = 587
-SENDER_EMAIL = "your_email@gmail.com"
-SENDER_PASSWORD = "your_app_password"
+                <pre class="code-snippet project3-code-snippet"><code># 미감지 상태 누적
+if not animal_detected:
+    missing_count += 1
+else:
+    missing_count = 0
 
-WARNING_BODY = (
-    "Warning: The monitored pet has disappeared from the camera frame"
-)
+# 150프레임 이상 미감지 시 실종 판단
+if missing_count >= 150:
+    warning = "Animal missing"
 
-def send_missing_alert_smtp(receiver_email: str) -&gt; bool:
-    """실종 판정 직후 SMTP로 경고 메일을 보낸다."""
-    msg = MIMEText(WARNING_BODY, "plain", "utf-8")
+    msg = MIMEText(warning)
     msg["Subject"] = "Pet monitoring alert"
-    msg["From"] = SENDER_EMAIL
     msg["To"] = receiver_email
 
-    try:
-        with smtplib.SMTP(SMTP_SERVER, SMTP_PORT) as server:
-            server.starttls()
-            server.login(SENDER_EMAIL, SENDER_PASSWORD)
-            server.sendmail(SENDER_EMAIL, [receiver_email], msg.as_string())
-        return True
-    except OSError:
-        return False</code></pre>
-                </div>
+    with smtplib.SMTP(SMTP_SERVER, 587) as server:
+        server.starttls()
+        server.login(SENDER_EMAIL, SENDER_PASSWORD)
+
+        server.sendmail(
+            SENDER_EMAIL,
+            receiver_email,
+            msg.as_string()
+        )</code></pre>
+
             </div>
+
         </div>
-    </section>
+
+    </div>
+</section>
 
     <!-- 7. 검증 결과 (R) -->
     <section class="project-section">
@@ -389,119 +525,109 @@ def send_missing_alert_smtp(receiver_email: str) -&gt; bool:
                 다중 반려동물 실험에서는 <strong>객체 스위칭(Switching)</strong>과 단일 검출 기반 제어의 한계를 분석했습니다.
             </p>
 
-            <!-- 4가지 검증 결과 그림 -->
-            <div class="verification-grid">
-                <!-- 강아지 검출 -->
-                <div class="verification-item">
-                    <div class="verification-img-wrap">
-                        <img src="images/project3/figure3.png" alt="강아지 검출 화면" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="screenshot-placeholder" style="display:none; min-height: 180px; margin: 0; border-radius: 10px;">
-                            <span>figure3.png</span>
-                        </div>
-                    </div>
-                    <h4 class="verification-title">강아지 검출</h4>
-                    <p class="verification-desc">TFLite 모델이 강아지를 실시간으로 인식하고 바운딩 박스를 출력합니다.</p>
-                </div>
-
-                <!-- 고양이 검출 -->
-                <div class="verification-item">
-                    <div class="verification-img-wrap">
-                        <img src="images/project3/cat-detection.png" alt="고양이 검출 화면" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="screenshot-placeholder" style="display:none; min-height: 180px; margin: 0; border-radius: 10px;">
-                            <span>cat-detection.png</span>
-                        </div>
-                    </div>
-                    <h4 class="verification-title">고양이 검출</h4>
-                    <p class="verification-desc">고양이 클래스도 동일한 파이프라인으로 탐지되어 추적 대상이 됩니다.</p>
-                </div>
-
-                <!-- Missing Animal 출력 -->
-                <div class="verification-item">
-                    <div class="verification-img-wrap">
-                        <img src="images/project3/missing-animal.png" alt="Missing Animal 출력 화면" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="screenshot-placeholder" style="display:none; min-height: 180px; margin: 0; border-radius: 10px;">
-                            <span>missing-animal.png</span>
-                        </div>
-                    </div>
-                    <h4 class="verification-title">Missing Animal 출력</h4>
-                    <p class="verification-desc">일정 프레임 이상 미감지 시 "Animal missing" 경고가 화면에 표시됩니다.</p>
-                </div>
-
-                <!-- 이메일 실시간 알림 -->
-                <div class="verification-item">
-                    <div class="verification-img-wrap">
-                        <img src="images/project3/email-alert.png" alt="이메일 실시간 알림 화면" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="screenshot-placeholder" style="display:none; min-height: 180px; margin: 0; border-radius: 10px;">
-                            <span>email-alert.png</span>
-                        </div>
-                    </div>
-                    <h4 class="verification-title">이메일 실시간 알림</h4>
-                    <p class="verification-desc">SMTP 프로토콜을 통해 실종 경고 메일이 즉시 발송됩니다.</p>
-                </div>
-            </div>
+            
 
             <div class="results-grid" style="margin-top: 3rem;">
+
+                <!-- 1. 기능 검증 -->
                 <div class="results-box">
+            
                     <h3 class="results-subtitle">기능 검증</h3>
+            
                     <div class="result-badge-group">
                         <span class="result-badge success">단일 객체</span>
                     </div>
+            
                     <ul class="results-list">
+            
                         <li>
                             <span class="result-icon">•</span>
-                            <span>짐벌 추적과 실종 시 자동 알림이 정상 동작함을 확인</span>
+                            <span>
+                                실내 1m 이내 환경에서 반려동물 탐지와 짐벌 추적 동작 확인
+                            </span>
                         </li>
+            
                         <li>
                             <span class="result-icon">•</span>
-                            <span>실내 약 1 m 범위 실험 등 자료에 기술된 조건에서 검증</span>
+                            <span>
+                                150프레임 미감지 시 경고 출력 및 SMTP 이메일 자동 전송 확인
+                            </span>
                         </li>
+            
                     </ul>
+            
                 </div>
+            
+            
+                <!-- 2. 한계 분석 -->
                 <div class="results-box">
+            
                     <h3 class="results-subtitle">한계 분석</h3>
+            
                     <div class="result-badge-group">
                         <span class="result-badge warning">Switching</span>
                     </div>
+            
                     <ul class="results-list">
+            
                         <li>
                             <span class="result-icon">•</span>
-                            <span>다중 반려동물 환경에서 검출 대상이 바뀌며 시선이 급전환되는 스위칭 현상</span>
+                            <span>
+                                다중 반려동물 환경에서 대부분 단일 객체만 검출
+                            </span>
                         </li>
+            
                         <li>
                             <span class="result-icon">•</span>
-                            <span>단일 객체 탐지 기반 제어로 개체별 실종을 독립 판단하기 어려운 구조적 한계</span>
+                            <span>
+                                검출 대상이 바뀌며 짐벌 시선이 급격히 전환되는 Switching 현상 발생
+                            </span>
                         </li>
+            
+                        <li>
+                            <span class="result-icon">•</span>
+                            <span>
+                                개체별 실종 여부를 독립적으로 판단하기 어려운 한계 확인
+                            </span>
+                        </li>
+            
                     </ul>
+            
                 </div>
-                <div class="results-box">
-                    <h3 class="results-subtitle">대외 성과</h3>
-                    <div class="result-badge-group">
-                        <span class="result-badge accent">학술대회</span>
-                    </div>
-                    <ul class="results-list">
-                        <li>
-                            <span class="result-icon">•</span>
-                            <span><strong>대한전자공학회 대구경북지부 AI·반도체·ICT 학술대회</strong> 논문 및 발표</span>
-                        </li>
-                        <li>
-                            <span class="result-icon">•</span>
-                            <span>차세대 AI 반도체 ICT 컨퍼런스 일환으로 성과 공유 (자료 명칭 기준)</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="results-box">
-                    <h3 class="results-subtitle">향후 과제</h3>
-                    <div class="result-badge-group">
-                        <span class="result-badge info">확장</span>
-                    </div>
-                    <ul class="results-list">
-                        <li>
-                            <span class="result-icon">•</span>
-                            <span>외출 감지, 울타리 이탈, 위치 로그, 모바일 푸시 등으로 확장 가능 (논문 결론)</span>
-                        </li>
-                    </ul>
-                </div>
+            
+            
+                <!-- 3. 개선 방향 -->
+                <div class="results-box results-box--center">
+
+    <h3 class="results-subtitle">개선 방향</h3>
+
+    <div class="result-badge-group">
+        <span class="result-badge info">Multi-object</span>
+    </div>
+
+    <ul class="results-list">
+
+        <li>
+            <span class="result-icon">•</span>
+            <span>YOLO 기반 다중 객체 검출 모델 적용</span>
+        </li>
+
+        <li>
+            <span class="result-icon">•</span>
+            <span>객체 추적 알고리즘을 결합해 개체별 상태 유지</span>
+        </li>
+
+        <li>
+            <span class="result-icon">•</span>
+            <span>입력 해상도 향상을 통한 검출 안정성 개선</span>
+        </li>
+
+    </ul>
+
+</div>
+            
             </div>
+                
         </div>
     </section>
 
@@ -510,17 +636,14 @@ def send_missing_alert_smtp(receiver_email: str) -&gt; bool:
         <div class="container">
             <h2 class="content-title center">배운 점</h2>
             <div class="learnings-grid">
-                <div class="learning-card">
-                    <p>엣지 디바이스에서 <strong>TFLite</strong> 추론과 <strong>짐벌 제어</strong>를 한 루프에 얹는 설계</p>
-                </div>
-                <div class="learning-card">
-                    <p>정규화된 바운딩 박스 중심과 <strong>θ<sub>x</sub></strong> 식으로 추적 연산을 단순화하는 방법</p>
-                </div>
-                <div class="learning-card">
-                    <p><strong>SMTP</strong> 기반 실종 알림과 상태 머신(미감지 누적) 연동</p>
-                </div>
-                <div class="learning-card">
-                    <p>다중 객체 환경의 <strong>스위칭</strong>·구조적 한계를 실험으로 정리한 인사이트</p>
+                <div class="learning-card learning-card-wide">
+                    <p>
+                        반려동물 탐지 결과를 짐벌 제어와 실종 알림으로 연결하면서,
+                        인식 기능 하나를 구현하는 것보다 각 기능이 실제 동작 흐름 안에서
+                        안정적으로 이어지도록 설계하는 것이 중요하다는 점을 배웠습니다.
+                        또한 다중 객체 환경에서 발생한 Switching 현상을 통해
+                        실제 환경에서는 예외 상황과 구조적 한계까지 함께 고려해야 한다는 점을 경험했습니다.
+                    </p>
                 </div>
             </div>
         </div>
