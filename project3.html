@@ -222,6 +222,26 @@
                     </li>
                 </ul>
 
+                <div class="project3-action-visual project3-action-compare">
+
+                    <div class="project3-action-visual-item">
+                        <img
+                            src="images/project3/figure3.png"
+                            alt="강아지 검출 화면"
+                        >
+                        <p>강아지 검출</p>
+                    </div>
+                
+                    <div class="project3-action-visual-item">
+                        <img
+                            src="images/project3/cat-detection.png"
+                            alt="고양이 검출 화면"
+                        >
+                        <p>고양이 검출</p>
+                    </div>
+                
+                </div>
+
                 <div class="implementation-tags">
                     <span>PiCamera2</span>
                     <span>TFLite</span>
@@ -339,6 +359,27 @@
                         <strong>SMTP</strong>를 통해 보호자 이메일로 자동 알림 전송
                     </li>
                 </ul>
+
+                <div class="project3-action-visual project3-action-compare">
+
+                    <div class="project3-action-visual-item">
+                        <img
+                            src="images/project3/missing-animal.png"
+                            alt="반려동물 미감지 후 Missing Animal 경고 화면"
+                        >
+                        <p>150프레임 연속 미감지 · Animal missing</p>
+                    </div>
+                
+                    <div class="project3-action-visual-item">
+                        <img
+                            src="images/project3/email-alert.png"
+                            alt="실종 판정 후 이메일 알림 화면"
+                        >
+                        <p>실종 판정 후 보호자 이메일 알림</p>
+                    </div>
+                
+                </div>
+
                 <div class="implementation-tags">
                     <span>150 Frames</span>
                     <span>Missing</span>
@@ -350,91 +391,69 @@
 
     </div>
 </section>
-    <section class="project-section">
-        <div class="container">
-    
-            <h2 class="content-title center">실제 동작 및 검증</h2>
-    
-            <p class="results-lead">
-                반려동물 탐지부터 실종 판정, 이메일 알림까지
-                실제 동작 결과를 확인했습니다.
-            </p>
-    
-            <!-- 4가지 검증 결과 그림 -->
-<div class="verification-grid">
 
-    <!-- 강아지 검출 -->
-    <div class="verification-item">
-        <div class="verification-img-wrap">
-            <img src="images/project3/figure3.png" alt="강아지 검출 화면"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="screenshot-placeholder"
-                style="display:none; min-height: 180px; margin: 0; border-radius: 10px;">
-                <span>figure3.png</span>
+<!-- =========================
+     실제 동작 영상
+========================== -->
+<section class="project-section">
+
+    <div class="container">
+
+        <h2 class="content-title center">
+            실제 동작 영상
+        </h2>
+
+        <p class="results-lead">
+            반려동물 위치에 따른 짐벌 추적과, 미감지 지속 시 실종 판정 및 이메일 알림 동작을 확인했습니다.
+        </p>
+
+
+        <div class="project3-demo-grid">
+
+            <!-- 01. 짐벌 추적 -->
+            <div class="project3-demo-card">
+
+                <h3>반려동물 추적 및 짐벌 제어</h3>
+
+                <video controls playsinline preload="metadata">
+                    <source
+                        src="videos/pet_tracking_gimbal_demo.mp4"
+                        type="video/mp4"
+                    >
+                </video>
+
+                <p>
+                    반려동물 위치 변화 → 중심 오차 계산 → 짐벌 추적
+                </p>
+
             </div>
+
+
+            <!-- 02. 실종 판정 및 이메일 알림 -->
+            <div class="project3-demo-card">
+
+                <h3>실종 판정 및 이메일 알림</h3>
+
+                <video controls playsinline preload="metadata">
+                    <source
+                        src="videos/missing_alert_email_demo.mp4"
+                        type="video/mp4"
+                    >
+                </video>
+
+                <p>
+                    150프레임 연속 미감지 → Animal missing → 이메일 알림
+                </p>
+
+            </div>
+
         </div>
-        <!-- 강아지 검출 -->
-<h4 class="verification-title">강아지 검출</h4>
-<p class="verification-desc">
-    TFLite 모델로 강아지를 실시간 탐지하고 바운딩 박스를 출력했습니다.
-</p>
+
     </div>
 
-    <!-- 고양이 검출 -->
-    <div class="verification-item">
-        <div class="verification-img-wrap">
-            <img src="images/project3/cat-detection.png" alt="고양이 검출 화면"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="screenshot-placeholder"
-                style="display:none; min-height: 180px; margin: 0; border-radius: 10px;">
-                <span>cat-detection.png</span>
-            </div>
-        </div>
-        <!-- 고양이 검출 -->
-<h4 class="verification-title">고양이 검출</h4>
-<p class="verification-desc">
-    고양이도 동일한 탐지 파이프라인으로 검출해 추적 대상으로 처리했습니다.
-</p>
-    </div>
+</section>
 
-    <!-- Missing Animal 출력 -->
-    <div class="verification-item">
-        <div class="verification-img-wrap">
-            <img src="images/project3/missing-animal.png" alt="Missing Animal 출력 화면"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="screenshot-placeholder"
-                style="display:none; min-height: 180px; margin: 0; border-radius: 10px;">
-                <span>missing-animal.png</span>
-            </div>
-        </div>
-        <!-- Missing Animal 출력 -->
-<h4 class="verification-title">Missing Animal 출력</h4>
-<p class="verification-desc">
-    150프레임 연속 미감지 시 "Animal missing" 경고를 화면에 출력했습니다.
-</p>
-    </div>
-
-    <!-- 이메일 실시간 알림 -->
-    <div class="verification-item">
-        <div class="verification-img-wrap">
-            <img src="images/project3/email-alert.png" alt="이메일 실시간 알림 화면"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="screenshot-placeholder"
-                style="display:none; min-height: 180px; margin: 0; border-radius: 10px;">
-                <span>email-alert.png</span>
-            </div>
-        </div>
-        <!-- 이메일 실시간 알림 -->
-<h4 class="verification-title">이메일 실시간 알림</h4>
-<p class="verification-desc">
-    실종 판단과 동시에 SMTP를 통해 보호자 이메일로 경고 메시지를 자동 전송했습니다.
-</p>
-    </div>
-
-</div>
     
-        </div>
-    </section>
 
     
     <!-- =========================
@@ -451,7 +470,7 @@
         </p>
 
 
-        <div class="code-blocks">
+        <div class="code-blocks project3-code-blocks">
 
             <!-- 짐벌 제어 -->
             <div class="code-block-item">
@@ -522,7 +541,7 @@ if missing_count >= 150:
             <h2 class="content-title center">검증 결과 및 분석</h2>
             <p class="results-lead">
                 단일 객체 환경에서 짐벌 추적·실종 알림이 의도대로 동작함을 확인했고,
-                다중 반려동물 실험에서는 <strong>객체 스위칭(Switching)</strong>과 단일 검출 기반 제어의 한계를 분석했습니다.
+                다중 반려동물 환경에서 발생한 객체 전환과 단일 검출 방식의 한계를 분석했습니다.
             </p>
 
             

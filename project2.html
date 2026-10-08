@@ -540,12 +540,12 @@ html<!DOCTYPE html>
                                 <h4>5. 목표 속도 기반 젯봇 제어</h4>
                         
                                 <p>
-                                    청색 신호 인식 시 목표 속도를 <strong>0.4</strong>,
+                                    청색 신호 인식 시 목표 속도를 <strong>0.4</strong>로 설정<br>
                                     적색 신호 또는 STOP 인식 시 <strong>0.0</strong>으로 설정
                                 </p>
                                 
                                 <p>
-                                    현재 속도를 <strong>0.05씩</strong> 단계적으로 증가·감소시켜
+                                    현재 속도를 <strong>0.05</strong>씩 단계적으로 증가·감소시켜
                                     목표 속도에 도달하도록 제어
                                 </p>
                                 
@@ -641,11 +641,12 @@ html<!DOCTYPE html>
                     <span class="demo-number">02</span>
 
                     <div>
-                        <h3>신호등 인식 기반 출발</h3>
+                        <h3>청색 신호 인식 후 출발·가속</h3>
 
                         <p>
-                            적색 신호에서 대기한 뒤 청색 신호를 인식하면
-                            목표 속도를 설정하고 젯봇이 출발하는 동작을 확인했습니다.
+                            청색 신호를 인식하면 현재 속도를
+                            <strong>0.05</strong>씩 단계적으로 높여
+                            출발·가속하도록 구현했습니다.
                         </p>
                     </div>
 
@@ -675,11 +676,11 @@ html<!DOCTYPE html>
                     <span class="demo-number">03</span>
 
                     <div>
-                        <h3>STOP 인식 기반 감속·정지</h3>
+                        <h3>STOP 인식 후 감속·정지</h3>
 
                         <p>
-                            주행 중 STOP 표지판을 인식하면 목표 속도를 낮추고,
-                            단계적으로 감속해 정지하는 동작을 확인했습니다.
+                            주행 중 STOP 표지판을 인식하면 현재 속도를
+                            <strong>0.05</strong>씩 단계적으로 줄여 감속·정지하도록 구현했습니다.
                         </p>
                     </div>
 
@@ -697,8 +698,14 @@ html<!DOCTYPE html>
     <section class="project-section bg-light">
         <div class="container">
             <h2 class="content-title center">
-                핵심 코드 및 제어 로직
+                핵심 코드
             </h2>
+
+            <p class="results-lead" style="margin-bottom: 0;">
+                교통표지판 분류 모델과 인식 결과에 따라
+                주행 속도를 제어하는 핵심 로직입니다.
+            </p>
+
             <div class="code-blocks">
 
                 <!-- 01. MobileNetV2 모델 -->

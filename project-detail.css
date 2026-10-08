@@ -3876,7 +3876,7 @@
 
 .action-card-container--vertical .action-card {
     width: 100%;
-    max-width: 560px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -4539,4 +4539,148 @@
 .code-blocks {
     max-width: 950px;
     margin: 40px auto 0;
+}
+
+.code-blocks {
+    align-items: stretch;
+}
+
+.code-block-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.project1-code-body {
+    flex: 1;
+}
+
+/* =========================
+   Project 1 - Demo Video
+========================= */
+
+.project1-demo-section {
+    padding: 50px 0;
+}
+
+.project1-demo-video {
+    width: 100%;
+    max-width: 640px;
+    margin: 30px auto 0;
+    text-align: center;
+}
+
+.project1-demo-video video {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(30, 40, 70, 0.12);
+}
+
+.project1-demo-video p {
+    margin: 12px 0 0;
+    font-size: 0.82rem;
+    color: #687086;
+}
+
+/* Project 3 - Core Implementation Visual */
+
+.project3-action-visual {
+    width: 100%;
+    max-width: 700px;
+    margin: 28px auto 0;
+}
+
+.project3-action-compare {
+    display: flex;
+    gap: 45px;
+    align-items: flex-start;
+}
+
+.project3-action-visual-item {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+}
+
+.project3-action-visual-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 9px;
+}
+
+.project3-action-visual-item p {
+    margin: 14px 0 0;
+    font-size: 0.82rem;
+    color: #687086;
+}
+
+@media (max-width: 768px) {
+    .project3-action-compare {
+        flex-direction: column;
+    }
+
+    .project3-action-visual-item {
+        width: 100%;
+    }
+}
+
+.action-card-container--vertical .action-card {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.action-card--gimbal {
+    max-width: 900px !important;
+}
+
+/* =========================
+   Project 3 - Demo Videos
+========================= */
+
+.project3-demo-grid {
+    width: 100%;
+    max-width: 900px;
+    margin: 36px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.project3-demo-card {
+    min-width: 0;
+    text-align: center;
+}
+
+.project3-demo-card h3 {
+    margin: 0 0 18px;
+    font-size: 1rem;
+    color: #252b3a;
+}
+
+.project3-demo-card video {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(30, 40, 70, 0.12);
+}
+
+.project3-demo-card p {
+    margin: 12px 0 0;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: #687086;
+}
+
+@media (max-width: 768px) {
+    .project3-demo-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
+
+.project3-code-blocks {
+    align-items: start;
 }
