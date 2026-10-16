@@ -417,89 +417,10 @@ img {
     background-color: var(--bg-light);
 }
 
-.about-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
 
-.about-text p {
-    font-size: 1.1rem;
-    color: var(--text-light);
-    margin-bottom: 20px;
-    line-height: 1.8;
-}
 
-.about-info {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin-top: 40px;
-    padding: 30px;
-    background-color: var(--bg-white);
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-}
 
-.info-item {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
 
-.info-label {
-    font-size: 0.9rem;
-    color: var(--text-light);
-    font-weight: 500;
-}
-
-.info-value {
-    font-size: 1.1rem;
-    color: var(--text-dark);
-    font-weight: 600;
-}
-
-/* ===== Skills Section ===== */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.skill-category {
-    background-color: var(--bg-white);
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-}
-
-.skill-category:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-}
-
-.skill-category h3 {
-    font-size: 1.3rem;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--border-color);
-}
-
-.skill-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.skill-tag {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
-}
 
 /* ===== Projects Section ===== */
 .projects {
@@ -518,6 +439,10 @@ img {
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
@@ -529,6 +454,7 @@ img {
     text-decoration: none;
     color: inherit;
     display: block;
+    height: 100%;
 }
 
 .project-image {
@@ -583,6 +509,9 @@ img {
 
 .project-info {
     padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .project-title {
@@ -601,7 +530,10 @@ img {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 20px;
+
+    margin-top: auto;
+    padding-top: 15px;
+    margin-bottom: 0;
 }
 
 .project-tech span {
@@ -883,9 +815,6 @@ img {
         text-align: center;
     }
 
-    .about-info {
-        grid-template-columns: 1fr;
-    }
 
     .contact-item {
         flex-direction: column;
@@ -911,4 +840,423 @@ img {
 
 .fade-in {
     animation: fadeInUp 0.6s ease forwards;
+}
+
+
+
+/* ===== About Profile ===== */
+
+.about-profile {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 55px;
+    align-items: center;
+    max-width: 950px;
+    margin: 0 auto 45px;
+
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    margin-bottom: 45px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+}
+
+.profile-photo img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+.profile-name {
+    font-size: 2rem;
+    color: #1e293b;
+    margin-bottom: 25px;
+}
+
+.profile-major {
+    font-size: 0.95rem;
+    color: #718096;
+    margin-bottom: 25px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.profile-item {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 15px;
+    font-size: 0.95rem;
+}
+
+.profile-label {
+    color: #667eea;
+    font-weight: 600;
+}
+
+.profile-value {
+    color: #4a5568;
+}
+
+
+/* ===== About Common Blocks ===== */
+
+.about-block {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 45px;
+}
+
+.about-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 22px;
+}
+
+
+/* ===== Skills ===== */
+
+.about-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.about-skills span {
+    padding: 10px 18px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    color: #475569;
+    font-size: 0.9rem;
+}
+
+
+
+/* ===== 나의 강점 ===== */
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.work-card {
+    background: #ffffff;
+    border: 1px solid #e8ecf3;
+    border-radius: 14px;
+    padding: 30px 26px;
+    min-height: 175px;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+/* 해시태그 강조 */
+.work-card .work-tag {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: #6366f1;
+
+    margin-bottom: 18px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e8ecf3;
+}
+
+/* 설명 문구 */
+.work-card p {
+    font-size: 0.93rem;
+    color: #64748b;
+    line-height: 1.75;
+    margin: 0;
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .work-card {
+        min-height: auto;
+        padding: 25px;
+    }
+}
+
+
+/* ===== Activities & Awards ===== */
+
+.activity-list {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 15px 30px;
+    margin: 0 auto;
+}
+
+.activity-item {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid #edf0f4;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-date {
+    color: #667eea;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.activity-item h4 {
+    color: #1e293b;
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.activity-item p {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+
+/* ===== About Responsive ===== */
+
+@media (max-width: 768px) {
+    .about-profile {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 25px;
+    }
+
+    .profile-photo {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-item,
+    .activity-item {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+}
+
+
+
+/* ===== 주요 활동 타임라인 ===== */
+
+.activity-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.timeline-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    position: relative;
+    gap: 20px;
+}
+
+/* 가로 연결선 */
+.timeline-row::before {
+    content: "";
+    position: absolute;
+    top: 38px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #d5d9f5;
+}
+
+.timeline-card {
+    position: relative;
+    min-width: 0;
+    padding: 0 12px 15px;
+}
+
+/* 날짜 */
+.timeline-date {
+    display: block;
+    color: #6366f1;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+/* 타임라인 점 */
+.timeline-point {
+    display: block;
+    position: relative;
+    z-index: 1;
+
+    width: 12px;
+    height: 12px;
+    margin: 0 auto 25px;
+
+    background: #6366f1;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #6366f1;
+}
+
+/* 활동 제목 */
+.timeline-card h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+/* 활동 설명 */
+.timeline-card p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #64748b;
+}
+
+/* 모바일에서는 세로 타임라인 */
+@media (max-width: 768px) {
+    .activity-timeline {
+        gap: 0;
+        position: relative;
+    }
+
+    .activity-timeline::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        bottom: 20px;
+        left: 6px;
+        width: 2px;
+        background: #d5d9f5;
+    }
+
+    .timeline-row {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .timeline-row::before {
+        display: none;
+    }
+
+    .timeline-card {
+        padding: 0 0 15px 30px;
+    }
+
+    .activity-timeline .timeline-date {
+        text-align: left;
+    }
+
+    .timeline-point {
+        position: absolute;
+        top: 4px;
+        left: 1px;
+        margin: 0;
+    }
+
+    .timeline-card h4 {
+        margin-bottom: 6px;
+    }
+}
+
+
+/* 주요 활동 타임라인 날짜 스타일 수정 */
+.activity-timeline .timeline-date {
+    display: block;
+    background: none;
+    color: #6366f1;
+    padding: 0;
+    border-radius: 0;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.timeline-card {
+    position: relative;
+    min-width: 0;
+    padding: 0 12px 15px;
+}
+
+.timeline-thumb {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    margin: 0 0 16px;
+}
+
+.timeline-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.timeline-thumb-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 16px;
+    color: #64748b;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    background: #ffffff;
+}
+
+.timeline-card h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.timeline-card p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #64748b;
+    margin: 0;
+}
+
+/* 논문 발표 포스터 */
+.timeline-thumb-paper {
+    background: #ffffff;
+}
+
+.timeline-thumb-paper img {
+    object-fit: contain;
+    padding: 8px;
+}
+
+.timeline-thumb.vibecoding img {
+    object-fit: contain;
+    background: #151a2b;
 }
